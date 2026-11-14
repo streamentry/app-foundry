@@ -252,7 +252,7 @@ export function validateBackup(spec:IdeaSpec,payload:unknown):Entry[]{
   for(const item of obj.entries){
     if(!item||typeof item!=='object')throw new TypeError('Invalid record in backup');
     const row=item as Record<string,unknown>;
-    if(typeof row.id!=='string'||typeof row.createdAt!=='string'||!row.values||typeof row.values!=='object'||typeof row.done!=='boolean'||!Number.isSafeInteger(row.count)||Number(row.count)<0||Number(row.count)>1000000)
+    if(typeof row.id!=='string'||typeof row.createdAt!=='string'||!row.values||typeof row.values!=='object'||typeof row.done!=='boolean'||typeof row.count!=='number'||!Number.isSafeInteger(row.count)||row.count<0||row.count>1000000)
       throw new TypeError('Invalid backup record');
     const values=row.values as Record<string,unknown>;
     if(Object.values(values).some(v=>typeof v!=='string'))throw new TypeError('Invalid backup field');
