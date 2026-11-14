@@ -119,7 +119,7 @@ export default function SettingsScreen() {
           <Section title="Privacy and ownership" p={p} />
           <Text style={{ color: p.muted, fontSize: 15, lineHeight: 24 }}>
             Shift Calendar stores your roster in a local SQLite database. No account, analytics, location tracking,
-            advertising SDK or remote server is used. Uninstalling removes your local data; export first if you need to keep it.
+            advertising SDK or remote server is used. Uninstalling may remove local data. Export a CSV first if you need a portable copy.
             CSV files you share are managed by the destination you choose.
           </Text>
           <Text style={{ color: p.muted, fontSize: 14, lineHeight: 22 }}>

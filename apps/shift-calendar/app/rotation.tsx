@@ -36,16 +36,15 @@ export default function RotationScreen() {
     const load = async () => {
       try {
         const records = await listShifts();
-        if (active) { setExisting(records); setError(null); }
-      } catch (failure) { if (active) setError(readableError(failure)); }
-      finally { if (active) setReady(true); }
+        if (active) { setExisting(records); setReady(true); setError(null); }
+      } catch (failure) { if (active) { setReady(false); setError(readableError(failure)); } }
     };
     void load();
     return () => { active = false; };
   }, []);
 
   const plan = useMemo(() => {
-    if (!ready || error) return null;
+    if (!ready) return null;
     try {
       return planRotation(startDate, rotationId, days, existing, {
         day: { start: dayStart, end: dayEnd },
@@ -54,7 +53,7 @@ export default function RotationScreen() {
     } catch {
       return null;
     }
-  }, [startDate, rotationId, days, existing, dayStart, dayEnd, nightStart, nightEnd, ready, error]);
+  }, [startDate, rotationId, days, existing, dayStart, dayEnd, nightStart, nightEnd, ready]);
 
   async function apply(): Promise<void> {
     if (!plan || !ready || applying) return;

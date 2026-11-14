@@ -84,7 +84,7 @@ export default function HomeScreen() {
             </>
           ) : (
             <>
-              <Text style={{ color: p.canvas, fontSize: 30, fontWeight: '800', letterSpacing: -1 }}>Nothing scheduled yet.</Text>
+              <Text style={{ color: p.canvas, fontSize: 30, fontWeight: '800', letterSpacing: -1 }}>No upcoming shifts.</Text>
               <Text style={{ color: p.canvas, opacity: 0.82, lineHeight: 21 }}>Add one shift or fill a repeating rotation.</Text>
             </>
           )}

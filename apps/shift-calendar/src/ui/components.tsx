@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
-import type { Palette } from '@foundry/design-system';
+import { contrastRatio, type Palette } from '@foundry/design-system';
 import {
   dateKey, monthDays, SHIFT_ABBREVIATIONS, SHIFT_LABELS, type Shift, weekDays,
 } from '../domain/roster';
@@ -28,6 +28,7 @@ export function Action({
   label: string; onPress: () => void; p: Palette; secondary?: boolean; destructive?: boolean;
   disabled?: boolean; accessibilityHint?: string;
 }) {
+  const danger = contrastRatio('#AF372E', p.surface) >= 4.5 ? '#AF372E' : '#FF948A';
   return (
     <Pressable
       accessibilityRole="button"
@@ -37,10 +38,10 @@ export function Action({
       onPress={onPress}
       style={({ pressed }) => [
         styles.action,
-        { backgroundColor: secondary || destructive ? p.surface : p.accent, borderColor: destructive ? '#C84C42' : secondary ? p.border : p.accent, opacity: disabled ? 0.45 : pressed ? 0.8 : 1 },
+        { backgroundColor: secondary || destructive ? p.surface : p.accent, borderColor: destructive ? danger : secondary ? p.border : p.accent, opacity: disabled ? 0.45 : pressed ? 0.8 : 1 },
       ]}
     >
-      <Text style={[styles.actionText, { color: destructive ? '#C84C42' : secondary ? p.ink : p.onAccent }]}>{label}</Text>
+      <Text style={[styles.actionText, { color: destructive ? danger : secondary ? p.ink : p.onAccent }]}>{label}</Text>
     </Pressable>
   );
 }
@@ -103,12 +104,12 @@ export function WeekStrip({
 export function MonthGrid({
   selected, onSelect, shifts, p,
 }: { selected: string; onSelect: (date: string) => void; shifts: readonly Shift[]; p: Palette }) {
-  const { fontScale } = useWindowDimensions();
+  const { fontScale, width } = useWindowDimensions();
   const cells = monthDays(selected);
   const map = new Map(shifts.map((shift) => [shift.date, shift]));
   const month = selected.slice(0, 7);
   const today = dateKey(new Date());
-  const size = Math.max(46, Math.ceil(fontScale * 45));
+  const size = Math.max(46, Math.floor((Math.min(width, 760) - 40) / 7), Math.ceil(fontScale * 45));
   const minWidth = 7 * size;
   const weekLabels = ['M','T','W','T','F','S','S'];
   return (
