@@ -138,7 +138,7 @@ test('backup round trip preserves lines, rejects wrong product and duplicate IDs
 
 test('CSV includes allowances + entries without spreadsheet formula injection',()=>{
   const a=mk('c1',{client:'=HYPERLINK("evil")',project:'@malicious'});
-  const w=makeLine({...emptyLine('2026-11-05'),description:'+SUM(1,2)'},a,'w1');
+  const w=makeLine({...emptyLine('2026-11-05'),minutes:'1',description:'+SUM(1,2)'},a,'w1');
   const csv=exportCsv([a,w]);
   assert.ok(csv.startsWith('\uFEFF'));
   assert.ok(csv.includes("'=HYPERLINK"));
