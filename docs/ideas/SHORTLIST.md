@@ -54,3 +54,5 @@ This shortlist deliberately mixes business tasks, event-driven utilities and spe
 - Sensitive logs (children, medications, financial details) need stronger disclosure, security and recovery than the first development sketch.
 
 > Engineering status: **Cash Drawer Count (idea 012) has a bespoke standalone preview**, not a commercially validated app. The top-15 scoring table remains a subjective shortlist. See [product README](../../apps/ideas/cash-float-count/README.md).
+
+> **2026-11-15 engineering selection:** Retainer Hours Ledger (#097, initial score 80) is being promoted as the second **standalone research app** after Cash Drawer Count. This deliberately overrides the unvalidated 87-point shortlist ranking based on founder-reachable freelancers, recurring money-related pain, and a cheap test. It is *not* a proven distribution or monetization opportunity. See [decision](DECISIONS/2026-11-15-retainer-hours.md).

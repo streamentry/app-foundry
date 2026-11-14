@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import {
   validDay,localDay,firstOfMonth,daysInMonth,readDuration,displayDuration,splitDuration,
@@ -76,7 +77,7 @@ test('line editing validation forbids crossing period or inserting after archive
 
 test('expired, upcoming, near-limit, archived status is derived from period and remaining minutes',()=>{
   const a=mk('main',{hours:'5',minutes:'0'});
-  const work=makeLine({...emptyLine('2026-11-05'),hours:'4',minutes:'0',description:'Work'},a,'w1');
+  const work=makeLine({...emptyLine('2026-11-05'),hours:'3',minutes:'30',description:'Work'},a,'w1');
   assert.equal(periodStatus(a,[],'2026-10-31'),'upcoming');
   assert.equal(periodStatus(a,[],'2026-12-01'),'ended');
   assert.equal(periodStatus(a,[work],'2026-11-10'),'in-progress');
@@ -166,4 +167,35 @@ test('legacy calculator migration requires exact whole minutes and preserves ori
   assert.equal(appendLegacy(migrated,migrated).length,2);
   assert.throws(()=>previewLegacy(JSON.stringify({...source,records:[{...source.records[0],
     values:{...source.records[0].values,usedHours:'0.33'}}]})),/exact whole-minute/);
+});
+
+test('Hours Left visual design passes WCAG AA text contrast for both modes',()=>{
+  const source=readFileSync(new URL('../src/ui.tsx',import.meta.url),'utf8');
+  const luminosity=hex=>{
+    const rgb=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255)
+      .map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);
+    return rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;
+  };
+  const contrast=(a,b)=>{
+    const x=luminosity(a),y=luminosity(b);
+    return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);
+  };
+  for(const mode of ['DAY','NIGHT']){
+    const match=source.match(new RegExp('export const '+mode+':Colors=\\{([\\s\\S]*?)\\};'));
+    assert.ok(match,mode+' palette missing');
+    const values=Object.fromEntries([...match[1].matchAll(/([a-zA-Z]+):'(#[0-9a-fA-F]{6})'/g)]
+      .map(x=>[x[1],x[2]]));
+    for(const [a,b] of [['ink','canvas'],['ink','surface'],['muted','canvas'],
+      ['muted','surface'],['onPrimary','primary'],['onSoft','soft'],['onWarning','warning']]){
+      assert.ok(contrast(values[a],values[b])>=4.5,mode+' text contrast fails '+a+'/'+b);
+    }
+  }
+});
+test('new entries require deliberate time input: do not fabricate 30-minute work',()=>{
+  const a=mk();
+  assert.deepEqual(emptyLine('2026-11-15'),{
+    day:'2026-11-15',action:'work',hours:'0',minutes:'0',description:'',
+  });
+  assert.deepEqual([emptyAgreement('2026-11-15').hours,emptyAgreement('2026-11-15').minutes],['0','0']);
+  assert.throws(()=>makeLine({...emptyLine('2026-11-15'),description:'No work'},a,'w0'),/positive/);
 });

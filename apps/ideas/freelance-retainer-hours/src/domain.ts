@@ -188,7 +188,8 @@ export function validateLedger(raw:readonly unknown[]):LedgerRecord[] {
 }
 export function agreementsOf(records:readonly LedgerRecord[]):Agreement[]{
   return records.filter((r):r is Agreement=>r.kind==='agreement')
-    .sort((a,b)=>a.state.localeCompare(b.state)||b.to.localeCompare(a.to)||a.client.localeCompare(b.client));
+    .sort((a,b)=>(a.state===b.state?0:a.state==='open'?-1:1)||
+      b.to.localeCompare(a.to)||a.client.localeCompare(b.client));
 }
 export function entriesOf(records:readonly LedgerRecord[],agreementId:string):Line[]{
   return records.filter((r):r is Line=>r.kind==='line'&&r.agreementId===agreementId)

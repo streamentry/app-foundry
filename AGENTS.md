@@ -57,3 +57,7 @@ Acceptance criteria + verified tests + human device QA + privacy/security/access
 ## Counter Close cash safety invariant
 
 For [Counter Close](apps/ideas/cash-float-count/README.md), preserve integer minor-unit cash arithmetic, strict money parsing, currency-specific denomination IDs, user-confirmed destructive actions, and separate storage for drafts, new saved closes, and legacy prototype records. Never silently re-interpret USD as VND, mix totals across currencies, claim certified POS accuracy, auto-upload drawer records, or overwrite unreadable drafts. Run the domain, theme-contrast and full monorepo suites before merging; physical-device cash UX remains a manual release gate.
+
+## Hours Left retainer invariants
+
+For [Retainer Hours Ledger](apps/ideas/freelance-retainer-hours/README.md), use only integer whole minutes for balances. Every period has an explicit inclusive start/end date. Keep allowance changes as independent dated credit entries; never silently change opening terms after work exists. Validate the **entire collection** and foreign keys on restore; reject malformed/unapproved imports, preserve original older data, require user confirmation for destructive operations. Never call user-entered credits "client approved", certify legal or tax amounts, sync identifiable client records automatically, or fabricate time entries. A passing JS bundle is not a native-device or real-client test.

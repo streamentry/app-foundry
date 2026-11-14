@@ -439,7 +439,7 @@ export default function RetainerHoursApp(){
           title={editingLine?'Correct this entry.':lineDraft.action==='work'?'Log real work.':'Add prepaid hours.'}
           body={selected.client+' · '+selected.project}/>
         <Card c={c}>
-          <Micro c={c}>PERIOD {selected.from} TO {selected.to}</Micro>
+          <Micro c={c}>{'PERIOD '+selected.from+' TO '+selected.to}</Micro>
           <Text style={{color:c.muted,fontSize:13,lineHeight:22}}>
             {lineDraft.action==='work'?'Work reduces available hours.':'Record hours added only after independently confirming client authorization.'}
           </Text>
