@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Foundry Starter",
+    "slug": "foundry-starter",
+    "scheme": "foundry-starter",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "edgeToEdgeEnabled": true
+    }
+  }
+}
