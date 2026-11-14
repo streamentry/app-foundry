@@ -1,0 +1,3 @@
+import assert from 'node:assert/strict';import{test}from'node:test';
+import{makeRoutine,completedToday,toggleRoutine,routinesForDay}from'../src/domain.ts';
+test('daily routine can be completed and uncompleted',()=>{const a=makeRoutine('a','Take a walk','09:30');const b=makeRoutine('b','Breakfast','08:00');const marked=toggleRoutine(a,'2026-11-14');assert.equal(completedToday(marked,'2026-11-14'),true);assert.deepEqual(routinesForDay([marked,b],'2026-11-14').map(r=>r.id),['b','a']);assert.equal(completedToday(toggleRoutine(marked,'2026-11-14'),'2026-11-14'),false);assert.throws(()=>makeRoutine('x','Walk','25:00'));});

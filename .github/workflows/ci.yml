@@ -11,15 +11,16 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with:
           node-version: '22'
-      # Bootstrap only: generate and commit package-lock.json, then replace with npm ci.
+      # Bootstrap debt: generate and commit package-lock.json, then use npm ci.
       - run: npm install --package-lock=false
       - run: npm run check
       - run: npm run lint
       - run: npm run doctor
       - run: npm run bundle:shift
+      - run: npm run bundle:portfolio

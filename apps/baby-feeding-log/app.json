@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Nest Baby Log Preview",
+    "slug": "foundry-baby-feeding-log",
+    "scheme": "foundry-baby-feeding-log",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.babyfeedinglog.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.babyfeedinglog.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Daylight Routine Preview",
+    "slug": "foundry-elderly-routine",
+    "scheme": "foundry-elderly-routine",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.elderlyroutine.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.elderlyroutine.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

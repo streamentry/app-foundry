@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Archive Warranty Preview",
+    "slug": "foundry-warranty-tracker",
+    "scheme": "foundry-warranty-tracker",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.warrantytracker.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.warrantytracker.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

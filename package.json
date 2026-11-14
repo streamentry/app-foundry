@@ -23,9 +23,19 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "doctor": "npm exec --workspace=@foundry/starter -- expo install --check && npm exec --workspace=@foundry/shift-calendar -- expo install --check",
+    "doctor": "npm run doctor --workspaces --if-present",
     "architecture:check": "node scripts/check-architecture.mjs",
-    "bundle:shift": "npm run bundle -w @foundry/shift-calendar"
+    "bundle:shift": "npm run bundle -w @foundry/shift-calendar",
+    "countdown-widget:start": "npm run start -w @foundry/countdown-widget",
+    "medication-checklist:start": "npm run start -w @foundry/medication-checklist",
+    "baby-feeding-log:start": "npm run start -w @foundry/baby-feeding-log",
+    "plant-watering:start": "npm run start -w @foundry/plant-watering",
+    "pet-medication:start": "npm run start -w @foundry/pet-medication",
+    "mileage-log:start": "npm run start -w @foundry/mileage-log",
+    "warranty-tracker:start": "npm run start -w @foundry/warranty-tracker",
+    "cleaning-schedule:start": "npm run start -w @foundry/cleaning-schedule",
+    "elderly-routine:start": "npm run start -w @foundry/elderly-routine",
+    "bundle:portfolio": "node scripts/bundle-portfolio.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

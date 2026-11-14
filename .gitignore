@@ -2,6 +2,8 @@ node_modules/
 .expo/
 .expo-shared/
 dist/
+dist-ios/
+dist-android/
 web-build/
 coverage/
 *.log
