@@ -1,0 +1,43 @@
+name: One-time npm lockfile bootstrap
+# Runs only when this workflow is added to the dedicated maintenance branch.
+# The workflow is deleted before merging the final lockfile PR.
+on:
+  push:
+    branches: [chore/reproducible-installs]
+    paths:
+      - .github/workflows/bootstrap-lockfile.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bootstrap-lockfile
+  cancel-in-progress: false
+
+jobs:
+  generate-lockfile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Generate npm lockfile without executing install scripts
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+      - name: Validate clean install from the lockfile
+        run: npm ci --no-audit --no-fund
+      - name: Commit lockfile to maintenance branch
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          if git diff --cached --quiet; then
+            echo "Lockfile already up to date."
+            exit 0
+          fi
+          git commit -m "build: commit reproducible npm dependency lockfile"
+          git push origin HEAD:chore/reproducible-installs
