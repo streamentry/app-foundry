@@ -69,6 +69,7 @@ export default function CashCloseApp(){
   const [legacy,setLegacy]=useState<CloseSession[]>([]);
   const [legacyError,setLegacyError]=useState<string|null>(null);
   const writes=useRef<Promise<void>>(Promise.resolve());
+  const savingRef=useRef(false);
 
   useEffect(()=>{
     let mounted=true;
@@ -149,20 +150,23 @@ export default function CashCloseApp(){
     }else clear();
   }
   async function saveCount(){
-    if(!draftReady||!draftWritable||busy||store.loading||!valid)return;
+    if(!draftReady||!draftWritable||busy||savingRef.current||store.loading||!valid)return;
+    savingRef.current=true;
     setBusy(true);setError(null);
     try{
       const old=editingId?entries.find(s=>s.id===editingId):null;
       if(editingId&&!old)throw new Error('The record being edited is no longer present');
-      const item=makeSession(draft,editingId??uniqueId(),old?.createdAt);
+      const fresh=makeSession(draft,editingId??uniqueId(),old?.createdAt);
+      const item:CloseSession=old?{...fresh,source:old.source}:fresh;
       if(editingId)await store.update(item.id,()=>item);
       else await store.add(item);
       setEditingId(null);setSelectedId(item.id);
       setDraft(emptyDraft(draft.currency,dayKey(new Date())));
       setStep('detail');
+      await writes.current.catch(()=>undefined);
       await Storage.removeItem(DRAFT_KEY);
     }catch(failure){setError(errorMessage(failure));}
-    finally{setBusy(false);}
+    finally{savingRef.current=false;setBusy(false);}
   }
   function edit(session:CloseSession){
     const change=()=>{
