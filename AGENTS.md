@@ -42,3 +42,14 @@ Agents may propose/edit code, docs and tests. **Obtain explicit human authorizat
 ## Completion
 
 Acceptance criteria + verified tests + human device QA + privacy/security/accessibility review + honest caveats. Incomplete work must be labeled clearly; never invent verification evidence.
+
+
+## Guardrails for the 100-idea research laboratory
+
+- `apps/ideas/*` are **prototypes**, never automatic publish targets. Do not mass-submit or advertise them as original finished apps.
+- Each app must correspond exactly to a catalog entry in `docs/ideas/ideas.json` and a validated schema in `packages/idea-engine/src/specs.ts`.
+- The research renderer is for workflow testing. Before release, a human approves a genuinely distinct design, store claims, privacy disclosures, native features and purchase behavior.
+- When editing form schemas, preserve the user's data; document migrations before any incompatible persistence change. Do not silently overwrite or auto-upload local records.
+- Preserve strict validation of imported JSON, CSV formula injection protection, user-confirmed destructive actions, and accessibility semantics.
+- Verify with `npm run idea:verify`, `npm run check`, `npm run lint` and `npm run idea:smoke` and report actual results, not assumptions.
+- Treat README scoring and keyword estimates as unvalidated hypotheses. No brand, medical, tax or legal claims without appropriate evidence.

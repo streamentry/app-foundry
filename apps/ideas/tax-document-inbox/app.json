@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Tax Document Checklist Test",
+    "slug": "foundry-idea-083",
+    "scheme": "foundry-idea-083",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i083"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i083"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

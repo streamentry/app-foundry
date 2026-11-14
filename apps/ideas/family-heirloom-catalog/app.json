@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Family Heirloom Catalog Test",
+    "slug": "foundry-idea-037",
+    "scheme": "foundry-idea-037",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i037"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i037"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

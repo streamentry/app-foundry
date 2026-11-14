@@ -11,3 +11,9 @@ This is an **idea inventory**, not a roadmap or a claim that 100 apps should be 
 ## Portfolio policy
 
 No more than 1–2 new discovery experiments at a time. Don't treat coding speed as proof of product-market fit. Don't submit low-functionality reskins; build a meaningfully distinct user workflow. No apps have been authorized for automatic publishing or monetization.
+
+## Built research prototypes
+
+- [BUILD.md](BUILD.md) — 100 runnable app projects, architecture and status.
+- [QA.md](QA.md) — native validation and safety gates.
+- Run all 100 in one place using `npm run idea:lab`.

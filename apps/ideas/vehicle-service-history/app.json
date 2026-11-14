@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Car Service Recordbook Test",
+    "slug": "foundry-idea-053",
+    "scheme": "foundry-idea-053",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i053"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i053"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

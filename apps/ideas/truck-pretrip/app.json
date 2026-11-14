@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Driver Pre-Trip Checklist Test",
+    "slug": "foundry-idea-003",
+    "scheme": "foundry-idea-003",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i003"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i003"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Sewing Measurement Cards Test",
+    "slug": "foundry-idea-062",
+    "scheme": "foundry-idea-062",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i062"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i062"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

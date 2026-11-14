@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Seed Germination Diary Test",
+    "slug": "foundry-idea-070",
+    "scheme": "foundry-idea-070",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i070"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i070"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

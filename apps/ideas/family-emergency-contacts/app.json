@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Emergency Contact Card Test",
+    "slug": "foundry-idea-033",
+    "scheme": "foundry-idea-033",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i033"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i033"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

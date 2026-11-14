@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Vocabulary Sentence Journal Test",
+    "slug": "foundry-idea-073",
+    "scheme": "foundry-idea-073",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i073"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i073"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

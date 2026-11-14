@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Gift Ideas and History Test",
+    "slug": "foundry-idea-085",
+    "scheme": "foundry-idea-085",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i085"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i085"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

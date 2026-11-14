@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "School Form Deadline Log Test",
+    "slug": "foundry-idea-032",
+    "scheme": "foundry-idea-032",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i032"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i032"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

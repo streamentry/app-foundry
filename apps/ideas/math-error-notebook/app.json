@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Math Mistake Notebook Test",
+    "slug": "foundry-idea-079",
+    "scheme": "foundry-idea-079",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i079"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i079"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

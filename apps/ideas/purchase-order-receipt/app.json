@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "PO Receipt Checklist Test",
+    "slug": "foundry-idea-015",
+    "scheme": "foundry-idea-015",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i015"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i015"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

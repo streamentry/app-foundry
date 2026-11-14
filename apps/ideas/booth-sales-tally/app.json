@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Craft Fair Sales Tally Test",
+    "slug": "foundry-idea-017",
+    "scheme": "foundry-idea-017",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i017"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i017"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

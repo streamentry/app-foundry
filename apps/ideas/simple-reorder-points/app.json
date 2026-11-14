@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Reorder Point Notebook Test",
+    "slug": "foundry-idea-020",
+    "scheme": "foundry-idea-020",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i020"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i020"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "workspaces": [
     "apps/*",
+    "apps/ideas/*",
     "packages/*"
   ],
   "engines": {
@@ -17,7 +18,7 @@
     "shift:start": "npm run start -w @foundry/shift-calendar",
     "shift:ios": "npm run ios -w @foundry/shift-calendar",
     "shift:android": "npm run android -w @foundry/shift-calendar",
-    "check": "npm run typecheck && npm run test && npm run architecture:check",
+    "check": "npm run typecheck && npm run test && npm run architecture:check && npm run idea:verify",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "lint": "eslint .",
@@ -35,7 +36,11 @@
     "warranty-tracker:start": "npm run start -w @foundry/warranty-tracker",
     "cleaning-schedule:start": "npm run start -w @foundry/cleaning-schedule",
     "elderly-routine:start": "npm run start -w @foundry/elderly-routine",
-    "bundle:portfolio": "node scripts/bundle-portfolio.mjs"
+    "bundle:portfolio": "node scripts/bundle-portfolio.mjs",
+    "idea:lab": "npm run start -w @foundry/idea-lab",
+    "idea:start": "node scripts/start-idea.mjs",
+    "idea:verify": "node scripts/verify-idea-apps.mjs",
+    "idea:smoke": "node scripts/smoke-ideas.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

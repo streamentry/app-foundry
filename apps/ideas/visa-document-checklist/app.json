@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Visa Paperwork Checklist Test",
+    "slug": "foundry-idea-057",
+    "scheme": "foundry-idea-057",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i057"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i057"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Room Measurements Notebook Test",
+    "slug": "foundry-idea-027",
+    "scheme": "foundry-idea-027",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i027"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i027"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

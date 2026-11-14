@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Tenant Move-Out Evidence Test",
+    "slug": "foundry-idea-084",
+    "scheme": "foundry-idea-084",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i084"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i084"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

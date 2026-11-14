@@ -51,3 +51,18 @@ Read docs/PORTFOLIO.md, AGENTS.md, DESIGN.md, ARCHITECTURE.md, docs/SDLC.md, and
 Each app owns its user workflows and design composition, not just a color skin.
 
 **Unfinished:** generated dependency lockfile and npm ci, real iOS/Android device QA, accessible interaction review, original branding, store registration and privacy disclosures. Do not publish yet.
+
+
+## 100 additional working research prototypes
+
+The [100 idea backlog](docs/ideas/README.md) now has **100 separately launchable offline Expo research apps** under `apps/ideas/<slug>/`. These reuse a typed workflow engine (13 workflow types, targeted formula rules), rather than 100 bespoke production UIs. They are **not 100 release-ready consumer products**.
+
+```sh
+npm install
+npm run idea:lab                         # browse and test all 100 in one app
+npm run idea:start -- cash-float-count  # launch standalone app by slug
+npm run idea:verify                      # validate all 100 manifests
+npm run idea:smoke                       # representative iOS + Android JS bundles
+```
+
+Read [implementation status](docs/ideas/BUILD.md) and [device QA checklist](docs/ideas/QA.md). Store release requires original individual UX and design, not just this working prototype.

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Family Visit Journal Test",
+    "slug": "foundry-idea-035",
+    "scheme": "foundry-idea-035",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i035"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i035"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

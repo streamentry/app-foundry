@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Aquarium Test Log Test",
+    "slug": "foundry-idea-043",
+    "scheme": "foundry-idea-043",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i043"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i043"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Travel Health Document List Test",
+    "slug": "foundry-idea-094",
+    "scheme": "foundry-idea-094",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i094"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i094"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

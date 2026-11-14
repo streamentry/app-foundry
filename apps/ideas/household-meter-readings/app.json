@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Utility Meter Readings Test",
+    "slug": "foundry-idea-025",
+    "scheme": "foundry-idea-025",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i025"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i025"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
