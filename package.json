@@ -24,7 +24,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "doctor": "npm exec --workspace=@foundry/starter -- expo install --check && npm exec --workspace=@foundry/shift-calendar -- expo install --check",
-    "architecture:check": "node scripts/check-architecture.mjs"
+    "architecture:check": "node scripts/check-architecture.mjs",
+    "bundle:shift": "npm run bundle -w @foundry/shift-calendar"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

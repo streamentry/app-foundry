@@ -10,6 +10,7 @@ The first functional app is [Shift Calendar](apps/shift-calendar/README.md), a l
 npm install
 npm run doctor
 npm run check
+npm run bundle:shift
 npm run shift:start
 # npm run shift:ios
 # npm run shift:android
