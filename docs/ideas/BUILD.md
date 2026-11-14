@@ -67,3 +67,7 @@ A shared rendering engine and different keywords do **not** constitute 100 indep
 The **standalone** `apps/ideas/cash-float-count` now has its own task-specific counting workflow rather than the shared idea renderer. Features include USD/VND/SGD/EUR denomination presets, integer minor-unit totals, blind counting before POS comparison, local draft recovery, append/edit/delete history, CSV and JSON backup, and opt-in migration from the earlier USD-like prototype. Its research entry in Idea Lab remains the **generic** shared renderer—launch the independent app to test the bespoke experience. No real-merchant acceptance test or store release has been completed.
 
 See [the product README](../../apps/ideas/cash-float-count/README.md) and [design direction](../design/apps/cash-float-count.md).
+
+## Second promoted research app: Hours Left (#097)
+
+The standalone [Retainer Hours Ledger](../../apps/ideas/freelance-retainer-hours/README.md) has its own typed UI, client periods, integer-minute work debits and allowance credits, historical statements, confirmation-gated local JSON backup/restore, CSV export and deliberate archived import from the old calculator. It is independent of the shared idea renderer. TypeScript, domain tests, Android/iOS JS bundles and contrast checks run via CI. **Merchant validation, signed native builds, real-device testing and store assets remain undone.** See [research decision](DECISIONS/2026-11-15-retainer-hours.md).

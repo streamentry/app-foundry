@@ -76,3 +76,13 @@ Cash Drawer Count (idea 012) now has a **bespoke standalone counting workflow**,
     npm run cash:bundle
 
 Read the [product README](apps/ideas/cash-float-count/README.md), [receipt-led design](docs/design/apps/cash-float-count.md), and [merchant research test](docs/research/CASH_CLOSE_PILOT.md).
+
+## Second promoted research app: Hours Left
+
+[Hours Left / Retainer Hours Ledger #097](apps/ideas/freelance-retainer-hours/README.md) is a standalone, **minute-exact prepaid-client-hours ledger** with its own information architecture and visual identity. It is not a generic Idea Lab screen, a timer, an invoice generator, or proof of market demand.
+
+    npm run retainer:start
+    npm run retainer:test
+    npm run retainer:bundle
+
+[Design](docs/design/apps/freelance-retainer-hours.md) · [Decision](docs/ideas/DECISIONS/2026-11-15-retainer-hours.md) · [Pilot](docs/research/RETAINER_HOURS_PILOT.md).

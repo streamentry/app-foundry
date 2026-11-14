@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Retainer Hours Ledger Test",
+    "name": "Hours Left Preview",
     "slug": "foundry-idea-097",
     "scheme": "foundry-idea-097",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "platforms": [

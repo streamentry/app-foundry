@@ -26,6 +26,12 @@ for (const idea of data.ideas) {
     assert.ok(screen.includes('<CashCloseApp'), 'Promoted cash close screen is missing');
     assert.ok(existsSync(join(dir, 'src', 'domain.ts')));
     assert.ok(existsSync(join(dir, 'tests', 'domain.test.mjs')));
+  } else if (idea.slug === 'freelance-retainer-hours') {
+    // Promoted retainer ledger; customer-specific UI, minute-exact domain, native JS export.
+    assert.ok(screen.includes('<RetainerHoursApp'), 'Retainer UI entrypoint missing');
+    assert.ok(existsSync(join(dir, 'src', 'domain.ts')));
+    assert.ok(existsSync(join(dir, 'src', 'RetainerHoursApp.tsx')));
+    assert.ok(existsSync(join(dir, 'tests', 'domain.test.mjs')));
   } else {
     assert.ok(screen.includes('<IdeaApp slug="' + idea.slug + '"'));
   }

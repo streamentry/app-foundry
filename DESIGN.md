@@ -48,3 +48,7 @@ A palette swap or changing the app name is never an acceptable differentiation s
 ## Promoted proof-of-work: Counter Close
 
 [Counter Close design contract](docs/design/apps/cash-float-count.md) is the first idea-portfolio application to replace the shared research renderer with a bespoke first-screen experience. Its distinctive contribution is **physical-count-first, POS-compare-second** cash reconciliation with mono-aligned receipt records. Engineering completion is not proof of merchant demand or a clearance to publish.
+
+## Second independent product — Hours Left
+
+[Hours Left design](docs/design/apps/freelance-retainer-hours.md) is a dedicated prepaid-hour reconciliation experience. It uses warm-ivory/indigo editorial typography, an exact time-consumption strip and dated debit/credit ledger. This is deliberately distinct from Counter Close's receipt-first physical cash counting. A color swap alone would not be distinct.

@@ -57,3 +57,20 @@ No store submission until one app demonstrates a differentiated, complete task t
 - [ ] Large-font, small phone, landscape tablet, dark mode, TalkBack and VoiceOver with cash in hand.
 - [ ] Five shop owners demonstrate a complete close without coaching. Timing and mistakes recorded, not guessed.
 - [ ] Trademark/name checks, original icon and screenshots, privacy policy URL and signing completed.
+
+## Hours Left #097 — mandatory native QA and commercial release gate
+
+- [ ] Test whole-minute arithmetic, negative balances, topups, start/end dates, zero and invalid durations.
+- [ ] Ensure editing an agreement after work exists cannot silently change its allowance or date range.
+- [ ] Create/rename/archive/delete a period; confirm removal of dependent entries after explicit warning.
+- [ ] Test large/complex portfolios, offline persistence, app termination and low-storage write errors.
+- [ ] Export CSV with potentially dangerous formula text; open in spreadsheet and verify neutralization.
+- [ ] Export JSON, corrupt schema/IDs/orphan rows and verify restore rejects it without mutating original data.
+- [ ] Import old generic calculator snapshots only by choice, with original historical records untouched.
+- [ ] Test client statement text export, sharing only through an explicit OS share-sheet action.
+- [ ] Test iOS/Android physical devices: 320pt, 200% dynamic type, TalkBack/VoiceOver, dark mode, long client names and tablet.
+- [ ] Interview five real prepaid-hour freelancers; record an actual *relative* improvement against spreadsheets/timers.
+- [ ] Obtain at least two costly commitments; otherwise stop independent App Store development.
+- [ ] Verify name/trademark, privacy policy, support route, screenshots, store category and signed native builds.
+
+The client ledger is **not a timer, invoice, contract approval, legal evidence or sync service**.

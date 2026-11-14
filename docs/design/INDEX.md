@@ -35,3 +35,7 @@ Open the starter gallery, choose a product, toggle day/night. This gallery is a 
 ## First promoted research app
 
 [**Counter Close / Cash Drawer Count**](apps/cash-float-count.md) — receipt-led industrial calm. Physical note/coin counting comes before optional POS reconciliation; separate from the ten original utility design directions and the generic research renderer. Working brand only.
+
+## New independent design direction
+
+[Hours Left / Retainer Hours Ledger](apps/freelance-retainer-hours.md) — indigo editorial ledger with a time-consumption strip and exact remaining hours. **One client, one period, one explainable balance.** The standalone UI is separate from the shared Idea Lab prototype. Research status only.
