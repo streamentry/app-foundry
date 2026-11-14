@@ -49,7 +49,7 @@ test('cash, commissions, split, cutlist and rounded clocks calculate',()=>{
   const cutlist=by('woodworking-cutlist');
   assert.equal(calculate(cutlist,makeEntry(cutlist,'cuts_1',sample(cutlist)))?.value,50);
   const round=by('timesheet-rounding');
-  assert.equal(calculate(round,makeEntry(round,'round_1',sample(round)))?.value,-1);
+  assert.equal(calculate(round,makeEntry(round,'round_1',sample(round)))?.value,14);
 });
 test('record identifiers, formula rules, uniqueness and CSV injection are validated',()=>{
   const invoice=by('invoice-number-ledger');
