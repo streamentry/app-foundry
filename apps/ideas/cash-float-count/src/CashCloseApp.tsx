@@ -68,7 +68,6 @@ export default function CashCloseApp(){
   const [legacy,setLegacy]=useState<CloseSession[]>([]);
   const [legacyError,setLegacyError]=useState<string|null>(null);
   const writes=useRef<Promise<void>>(Promise.resolve());
-  const scroll=useRef<ScrollView|null>(null);
 
   useEffect(()=>{
     let mounted=true;
@@ -110,6 +109,7 @@ export default function CashCloseApp(){
   },[store.records]);
   const entries=sortedSessions(valid??[]);
   const selected=entries.find(s=>s.id===selectedId)??null;
+  const pendingLegacy=legacy.filter(s=>!entries.some(saved=>saved.id===s.id));
   const denoms=denominations(draft.currency);
   const setQuantity=(id:string,n:number)=>setDraft(previous=>({
     ...previous,counts:{...previous.counts,[id]:n},
@@ -124,7 +124,6 @@ export default function CashCloseApp(){
 
   function go(next:Step){
     setStep(next);setError(null);
-    scroll.current?.scrollTo({y:0,animated:true});
   }
   function currencyChange(code:CurrencyCode){
     if(code===draft.currency||editingId)return;
@@ -168,8 +167,7 @@ export default function CashCloseApp(){
     const change=()=>{
       setDraft(draftFromSession(session));
       setEditingId(session.id);setStep('count');
-      scroll.current?.scrollTo({y:0,animated:true});
-    };
+      };
     if(hasChanges(draft)&&editingId!==session.id){
       Alert.alert('Replace unfinished draft?','Opening this close for editing clears your unfinished count.',[
         {text:'Keep draft',style:'cancel'},{text:'Edit saved close',onPress:change},
@@ -211,12 +209,12 @@ export default function CashCloseApp(){
       ]);
   }
   function importOld(){
-    if(!valid||legacy.length===0)return;
+    if(!valid||pendingLegacy.length===0)return;
     Alert.alert('Import old prototype records?',
-      'Import '+legacy.length+' count(s) as USD. The old app used $100, $50, $20, $10, $5 and $1 quantities without recording a currency. Please verify the amounts. Old data stays intact.',[
+      'Import '+pendingLegacy.length+' count(s) as USD. The old app used $100, $50, $20, $10, $5 and $1 quantities without recording a currency. Please verify the amounts. Old data stays intact.',[
         {text:'Cancel',style:'cancel'},
         {text:'Import as USD',onPress:()=>{
-          void store.change(current=>appendLegacy(current,legacy)).then(()=>{
+          void store.change(current=>appendLegacy(current,pendingLegacy)).then(()=>{
             setLegacy([]);setError(null);setStep('history');
           }).catch(failure=>setError(errorMessage(failure)));
         }},
@@ -249,7 +247,7 @@ export default function CashCloseApp(){
           <Text style={{color:tab.active?c.onBrand:c.ink,fontWeight:'800'}}>{tab.label}</Text>
         </Pressable>)}
     </View>
-    <ScrollView ref={scroll} keyboardShouldPersistTaps="handled"
+    <ScrollView key={step} keyboardShouldPersistTaps="handled"
       contentContainerStyle={{width:'100%',maxWidth:730,alignSelf:'center',padding:22,paddingBottom:84,gap:19}}>
       {error||store.error?<View style={{backgroundColor:c.card,padding:14,borderWidth:1,borderColor:c.danger,borderRadius:12}}>
         <Text accessibilityRole="alert" style={{color:c.ink,fontSize:15,lineHeight:23}}>{error||store.error}</Text>
@@ -400,10 +398,10 @@ export default function CashCloseApp(){
             A clear local history. Different currencies are always kept separate.
           </Text>
         </View>
-        {legacy.length>0?<View style={{backgroundColor:c.focus,borderRadius:13,padding:16,gap:11}}>
+        {pendingLegacy.length>0?<View style={{backgroundColor:c.focus,borderRadius:13,padding:16,gap:11}}>
           <Text style={{color:c.onFocus,fontWeight:'900',fontSize:17}}>Old prototype entries found</Text>
           <Text style={{color:c.onFocus,lineHeight:22,fontSize:14}}>
-            {legacy.length} records can be imported as USD. The original records will not be deleted.
+            {pendingLegacy.length} records can be imported as USD. The original records will not be deleted.
           </Text>
           <Action c={c} onPress={importOld}>Review & import old records</Action>
         </View>:null}

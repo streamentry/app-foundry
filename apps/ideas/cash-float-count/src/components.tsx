@@ -119,7 +119,7 @@ export function Receipt({c,session,showDetails=true}:{
   const coins=sumCash(session.currency,session.counts,'coin');
   return <View style={{backgroundColor:c.receipt,borderWidth:1,borderColor:c.line,
     borderRadius:4,padding:22,gap:15}}>
-    <Label c={c}>CLOSE RECORD / {session.businessDay}</Label>
+    <Label c={c}>{'CLOSE RECORD / '+session.businessDay}</Label>
     <Text accessibilityRole="header" style={{fontFamily:mono,fontWeight:'800',fontSize:25,color:c.ink}}>
       {session.drawer||'Unlabelled till'}
     </Text>
