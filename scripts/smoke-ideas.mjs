@@ -5,6 +5,7 @@ import { spawnSync } from 'node:child_process';
 const workspaces=[
   '@foundry/idea-lab',
   '@foundry/idea-cash-float-count',
+  '@foundry/idea-freelance-retainer-hours',
   '@foundry/idea-truck-pretrip',
   '@foundry/idea-knitting-row-counter',
   '@foundry/idea-home-filter-replacement',

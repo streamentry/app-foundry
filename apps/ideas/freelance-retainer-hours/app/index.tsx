@@ -1,3 +1,3 @@
-import { IdeaApp } from '@foundry/idea-engine';
-/** Independent on-device app for idea 097; no shared user data with other apps. */
-export default function App(){return <IdeaApp slug="freelance-retainer-hours"/>;}
+import RetainerHoursApp from '../src/RetainerHoursApp';
+/** Promoted idea #097, an independent prepaid-hours reconciliation product. */
+export default function App(){return <RetainerHoursApp/>;}
