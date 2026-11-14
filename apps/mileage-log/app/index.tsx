@@ -25,7 +25,7 @@ export default function MileageScreen() {
   }
   function remove(t:Trip){
     Alert.alert('Delete trip?',niceDay(t.day)+' · '+t.purpose,[
-      {text:'Keep',style:'cancel'},{text:'Delete',style:'destructive',onPress:()=>{void store.remove(t.id);}}
+      {text:'Keep',style:'cancel'},{text:'Delete',style:'destructive',onPress:()=>{void store.remove(t.id).catch(() => undefined);}}
     ]);
   }
   async function exportFile(){

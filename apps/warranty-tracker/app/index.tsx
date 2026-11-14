@@ -24,7 +24,7 @@ export default function WarrantyScreen() {
   }
   function remove(item:Warranty){
     Alert.alert('Remove warranty?',item.product+' will be removed from the archive.',[
-      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(item.id);}}
+      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(item.id).catch(() => undefined);}}
     ]);
   }
   return <Screen p={p} maxWidth={630} inset={22}>

@@ -29,16 +29,17 @@ export default function CleaningScreen() {
   }
   function remove(item:Chore){
     Alert.alert('Remove this chore?',item.title+' and its history will be deleted.',[
-      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(item.id);}}
+      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(item.id).catch(() => undefined);}}
     ]);
   }
-  const progress=chores.length===0?0:Math.round(finished.length/chores.length*100);
+  const tasksToday=due.length+finished.length;
+  const progress=tasksToday===0?100:Math.round(finished.length/tasksToday*100);
   return <Screen p={p} maxWidth={660}>
     <BrandHeading p={p} theme={theme} subtitle="A little order, with no pressure to keep a streak." />
     <View style={{backgroundColor:p.surface,borderRadius:20,padding:20,gap:19}}>
       <View style={{flexDirection:'row',alignItems:'baseline',justifyContent:'space-between'}}>
-        <Text style={{fontSize:52,fontWeight:'800',color:p.ink,letterSpacing:-2}}>{finished.length} / {chores.length}</Text>
-        <Text style={{fontSize:13,color:p.muted,fontWeight:'700'}}>DONE TODAY</Text>
+        <Text style={{fontSize:52,fontWeight:'800',color:p.ink,letterSpacing:-2}}>{finished.length} / {tasksToday}</Text>
+        <Text style={{fontSize:13,color:p.muted,fontWeight:'700'}}>DONE OF TODAY'S TASKS</Text>
       </View>
       <View style={{backgroundColor:p.tint,height:15,borderRadius:9,overflow:'hidden'}}>
         <View style={{backgroundColor:p.accent,width:progress+'%',height:'100%',borderRadius:9}}/>

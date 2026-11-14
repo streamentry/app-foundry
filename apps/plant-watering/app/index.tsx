@@ -28,7 +28,7 @@ export default function PlantScreen() {
   }
   function remove(plant:Plant){
     Alert.alert('Remove plant?',plant.name+' and its watering history will be removed.',[
-      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(plant.id);}}
+      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(plant.id).catch(() => undefined);}}
     ]);
   }
   return <Screen p={p} maxWidth={650}>

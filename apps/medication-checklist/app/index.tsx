@@ -29,7 +29,7 @@ export default function MedicationScreen() {
   function remove(m: Medication) {
     Alert.alert('Remove from checklist?', 'This will also delete locally logged days for '+m.name+'.', [
       { text:'Cancel',style:'cancel' },
-      { text:'Remove',style:'destructive',onPress:()=>{void store.remove(m.id);} },
+      { text:'Remove',style:'destructive',onPress:()=>{void store.remove(m.id).catch(() => undefined);} },
     ]);
   }
   const pending = dueToday(sorted,today);

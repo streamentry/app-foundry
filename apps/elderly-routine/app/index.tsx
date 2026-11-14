@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Alert, Pressable, Text, View } from 'react-native';
-import { BrandHeading, ErrorLine, Field, Screen, Tap, TimeField, dayKey, uniqueId, useLocalRecords, useProductTheme } from '@foundry/mobile-kit';
+import { ErrorLine, Field, Screen, Tap, TimeField, dayKey, uniqueId, useLocalRecords, useProductTheme } from '@foundry/mobile-kit';
 import { completedToday, makeRoutine, routinesForDay, toggleRoutine, type Routine } from '../src/domain';
 
 export default function DaylightScreen() {
-  const {theme,p}=useProductTheme('elderly-routine');
+  const {p}=useProductTheme('elderly-routine');
   const store=useLocalRecords<Routine>('daylight.routines');
   const today=dayKey(new Date());
   const items=routinesForDay(store.records,today);
@@ -28,7 +28,7 @@ export default function DaylightScreen() {
   }
   function remove(item:Routine){
     Alert.alert('Remove routine?',item.title+' will be removed from this device.',[
-      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(item.id);}}
+      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(item.id).catch(() => undefined);}}
     ]);
   }
   return <Screen p={p} maxWidth={640} inset={26}>

@@ -12,8 +12,10 @@ export default function BabyScreen() {
   const [note,setNote]=useState('');
   const [error,setError]=useState<string|null>(null);
   const [now,setNow]=useState(()=>new Date());
+  const [showAll,setShowAll]=useState(false);
   const today=dayKey(now);
   const recent=recentEntries(store.records,now);
+  const visible=showAll?[...store.records].sort((a,b)=>b.at.localeCompare(a.at)):recent;
   const lastFeed=latestOf(store.records,'feed');
   const lastDiaper=latestOf(store.records,'diaper');
 
@@ -25,7 +27,7 @@ export default function BabyScreen() {
   }
   function remove(entry:BabyEntry) {
     Alert.alert('Remove this log?',dateLabel(entry.at)+' will be removed from this device.',[
-      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(entry.id);setNow(new Date());}}
+      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(entry.id).catch(() => undefined);setNow(new Date());}}
     ]);
   }
   const button=(kind:EntryKind,title:string,symbol:string)=>(
@@ -58,9 +60,10 @@ export default function BabyScreen() {
       ))}
     </View>
     <View style={{gap:12}}>
-      <Text accessibilityRole="header" style={{color:p.ink,fontSize:22,fontWeight:'800'}}>{'Past 24 hours · '+recent.length+' entries'}</Text>
+      <Text accessibilityRole="header" style={{color:p.ink,fontSize:22,fontWeight:'800'}}>{showAll?'Full history · '+store.records.length+' entries':'Past 24 hours · '+recent.length+' entries'}</Text>
+      {store.records.length>recent.length?<Pressable accessibilityRole="button" style={{minHeight:48,justifyContent:'center'}} onPress={()=>setShowAll((v)=>!v)}><Text style={{color:p.accent,fontWeight:'800'}}>{showAll?'Show last 24 hours':'Show full history'}</Text></Pressable>:null}
       {recent.length===0?<Text style={{color:p.muted,fontSize:16}}>No logs yet. Your first tap starts a timeline.</Text>:null}
-      {recent.map((entry)=>(
+      {visible.map((entry)=>(
         <View key={entry.id} style={{flexDirection:'row',alignItems:'center',gap:12,paddingVertical:13,borderBottomWidth:1,borderColor:p.border}}>
           <View style={{height:48,width:48,backgroundColor:p.tint,borderRadius:24,alignItems:'center',justifyContent:'center'}}>
             <Text style={{color:p.onTint,fontSize:23}}>{entry.kind==='feed'?'◒':'◌'}</Text>
@@ -74,7 +77,7 @@ export default function BabyScreen() {
           </Pressable>
         </View>
       ))}
-      {store.records.length>recent.length?<Text style={{color:p.muted,fontSize:13}}>Older logs are stored locally but this screen shows the latest 24 hours only.</Text>:null}
+      {store.records.length>recent.length&&!showAll?<Text style={{color:p.muted,fontSize:13}}>Older logs are available using Show full history.</Text>:null}
     </View>
     <Text style={{color:p.muted,fontSize:12,lineHeight:20}}>Today: {today}. No baby profile, cloud account, health scoring or medical advice. Records live only on this device; export and recovery are not included in this MVP.</Text>
   </Screen>;

@@ -27,7 +27,7 @@ export default function CountdownScreen() {
   function remove(event: Moment) {
     Alert.alert('Remove event?', event.title + ' will be removed from this device.', [
       { text: 'Keep', style: 'cancel' },
-      { text: 'Remove', style: 'destructive', onPress: () => { void store.remove(event.id); } },
+      { text: 'Remove', style: 'destructive', onPress: () => { void store.remove(event.id).catch(() => undefined); } },
     ]);
   }
 

@@ -30,7 +30,7 @@ export default function PetScreen() {
   }
   function remove(item:Treatment){
     Alert.alert('Remove treatment?',item.name+' for '+item.pet+' and its history will be deleted.',[
-      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(item.id);}}
+      {text:'Keep',style:'cancel'},{text:'Remove',style:'destructive',onPress:()=>{void store.remove(item.id).catch(() => undefined);}}
     ]);
   }
   return <Screen p={p} maxWidth={650}>
