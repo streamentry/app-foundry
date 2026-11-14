@@ -5,6 +5,20 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    # Expo SDK couples specific React, React Native, and TS versions.
+    # Upgrade these together manually via Expo release notes and expo install --fix.
+    ignore:
+      - dependency-name: react
+      - dependency-name: react-native
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
+      - dependency-name: expo
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/react"
+      - dependency-name: eslint
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@eslint/js"
+        update-types: ["version-update:semver-major"]
     groups:
       development:
         dependency-type: development
