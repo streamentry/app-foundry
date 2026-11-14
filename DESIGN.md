@@ -44,3 +44,7 @@ Before promoting an idea to a consumer release:
 4. Verify accessibility, dark mode, platform conventions, user delight and the full data lifecycle on real devices.
 
 A palette swap or changing the app name is never an acceptable differentiation strategy.
+
+## Promoted proof-of-work: Counter Close
+
+[Counter Close design contract](docs/design/apps/cash-float-count.md) is the first idea-portfolio application to replace the shared research renderer with a bespoke first-screen experience. Its distinctive contribution is **physical-count-first, POS-compare-second** cash reconciliation with mono-aligned receipt records. Engineering completion is not proof of merchant demand or a clearance to publish.

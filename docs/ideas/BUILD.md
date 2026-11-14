@@ -61,3 +61,9 @@ Sensitive family, health, pet, financial, or emergency notes can be recorded loc
 ## App Store 4.3
 
 A shared rendering engine and different keywords do **not** constitute 100 independent app designs. See [Apple's App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) before submitting anything. Distinct usefulness, quality and user demand are required.
+
+## Promoted candidate: Counter Close / Cash Drawer Count (012)
+
+The **standalone** `apps/ideas/cash-float-count` now has its own task-specific counting workflow rather than the shared idea renderer. Features include USD/VND/SGD/EUR denomination presets, integer minor-unit totals, blind counting before POS comparison, local draft recovery, append/edit/delete history, CSV and JSON backup, and opt-in migration from the earlier USD-like prototype. Its research entry in Idea Lab remains the **generic** shared renderer—launch the independent app to test the bespoke experience. No real-merchant acceptance test or store release has been completed.
+
+See [the product README](../../apps/ideas/cash-float-count/README.md) and [design direction](../design/apps/cash-float-count.md).

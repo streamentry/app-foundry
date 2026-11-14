@@ -1,3 +1,3 @@
-import { IdeaApp } from '@foundry/idea-engine';
-/** Independent on-device app for idea 012; no shared user data with other apps. */
-export default function App(){return <IdeaApp slug="cash-float-count"/>;}
+import CashCloseApp from '../src/CashCloseApp';
+/** Promoted from generic idea #012 to a distinct standalone closeout workflow. */
+export default function App(){return <CashCloseApp/>;}

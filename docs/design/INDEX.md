@@ -31,3 +31,7 @@ npm run start
 ```
 
 Open the starter gallery, choose a product, toggle day/night. This gallery is a prototype and does **not** replace a real device QA or professional design review.
+
+## First promoted research app
+
+[**Counter Close / Cash Drawer Count**](apps/cash-float-count.md) — receipt-led industrial calm. Physical note/coin counting comes before optional POS reconciliation; separate from the ten original utility design directions and the generic research renderer. Working brand only.
