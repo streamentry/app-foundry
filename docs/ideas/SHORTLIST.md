@@ -52,3 +52,5 @@ This shortlist deliberately mixes business tasks, event-driven utilities and spe
 - High repeat use does not guarantee willingness to pay.
 - Standalone apps can create App Store spam/review risk if they replicate existing tools.
 - Sensitive logs (children, medications, financial details) need stronger disclosure, security and recovery than the first development sketch.
+
+> Engineering status: **Cash Drawer Count (idea 012) has a bespoke standalone preview**, not a commercially validated app. The top-15 scoring table remains a subjective shortlist. See [product README](../../apps/ideas/cash-float-count/README.md).

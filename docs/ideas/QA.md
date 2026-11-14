@@ -45,3 +45,15 @@
 ## Exit condition
 
 No store submission until one app demonstrates a differentiated, complete task that five representative users can perform reliably and a human signs off the native QA and release documents. A successful JS bundle is not a native build.
+
+## Cash Close first-product production gates
+
+- [ ] Physical USD, VND, SGD and EUR denomination counts cross-checked against real bundles.
+- [ ] Blind count → enter expected POS cash → save → reopen exact variance across relaunch.
+- [ ] Change-currency confirmation never reinterprets earlier counted money.
+- [ ] Save failure and storage-full state preserves local draft and never claims saved history.
+- [ ] Old generic prototype imported **only** with user approval of USD interpretation; old data untouched; duplicate import idempotent.
+- [ ] CSV opened in spreadsheet without formula execution; JSON export and paste restore repeatably tested.
+- [ ] Large-font, small phone, landscape tablet, dark mode, TalkBack and VoiceOver with cash in hand.
+- [ ] Five shop owners demonstrate a complete close without coaching. Timing and mistakes recorded, not guessed.
+- [ ] Trademark/name checks, original icon and screenshots, privacy policy URL and signing completed.

@@ -21,7 +21,14 @@ for (const idea of data.ideas) {
   assert.ok(!pkg.scripts.publish, 'Prototype must not publish automatically: ' + idea.slug);
   assert.ok(config.expo.ios.bundleIdentifier.endsWith('.i' + idea.id));
   assert.ok(config.expo.android.package.endsWith('.i' + idea.id));
-  assert.ok(screen.includes('<IdeaApp slug="' + idea.slug + '"'));
+  if (idea.slug === 'cash-float-count') {
+    // First product promoted from the generic idea renderer to its own researched workflow.
+    assert.ok(screen.includes('<CashCloseApp'), 'Promoted cash close screen is missing');
+    assert.ok(existsSync(join(dir, 'src', 'domain.ts')));
+    assert.ok(existsSync(join(dir, 'tests', 'domain.test.mjs')));
+  } else {
+    assert.ok(screen.includes('<IdeaApp slug="' + idea.slug + '"'));
+  }
   assert.ok(existsSync(join(dir, 'app', '_layout.tsx')));
   assert.ok(existsSync(join(dir, 'tsconfig.json')));
   assert.ok(existsSync(join(dir, 'README.md')));
