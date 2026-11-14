@@ -70,3 +70,20 @@ test('no existing 10 portfolio apps were duplicated',()=>{
 const existing=new Set(['shift-calendar','countdown-widget','medication-checklist','baby-feeding-log','plant-watering','pet-medication','mileage-log','warranty-tracker','cleaning-schedule','elderly-routine']);
 for(const spec of ideaSpecs)assert.ok(!existing.has(spec.slug),spec.slug);
 });
+
+test('optional ledger amounts do not crash summaries or blank records',()=>{
+  const spec=by('invoice-number-ledger');
+  const values={...sample(spec)};
+  delete values.amount;
+  const row=makeEntry(spec,'no_amount',values);
+  assert.equal(calculate(spec,row),null);
+  assert.doesNotThrow(()=>summarize(spec,[row],'2028-02-29'));
+  assert.equal(summarize(spec,[row],'2028-02-29').main,'0');
+});
+test('backup restore rejects duplicate invoice identifiers (case-insensitive)',()=>{
+  const spec=by('invoice-number-ledger');
+  const first=makeEntry(spec,'invoice_a',{...sample(spec),number:'abc-01'});
+  const second=makeEntry(spec,'invoice_b',{...sample(spec),number:'ABC-01'});
+  const payload={schema:1,slug:spec.slug,entries:[first,second]};
+  assert.throws(()=>validateBackup(spec,payload),/already recorded/);
+});

@@ -116,7 +116,7 @@ function RowActions({
 }: {
   spec:IdeaSpec;entry:Entry;p:Palette;busy:boolean;
   onEdit:(entry:Entry)=>void;onDelete:(entry:Entry)=>void;
-  onUpdate:(entry:Entry)=>Promise<void>;onError:(message:string)=>void;
+  onUpdate:(edit:(current:Entry)=>Entry)=>Promise<void>;onError:(message:string)=>void;
   expanded:boolean;setExpanded:()=>void;
 }){
   const flow=spec.flow;
@@ -125,16 +125,16 @@ function RowActions({
   const inventory=flow==='inventory'&&Object.hasOwn(entry.values,'quantity');
   async function updateCounter(delta:number){
     try{
-      if(hasCount)await onUpdate(increment(entry,delta));
-      else{
-        const n=Number(entry.values.quantity??'0')+delta;
+      if(hasCount)await onUpdate((current)=>increment(current,delta));
+      else await onUpdate((current)=>{
+        const n=Number(current.values.quantity??'0')+delta;
         if(!Number.isFinite(n)||n<0)throw new RangeError('Quantity cannot be negative');
-        await onUpdate({...entry,values:{...entry.values,quantity:String(n)}});
-      }
+        return {...current,values:{...current.values,quantity:String(n)}};
+      });
     }catch(error){onError(readableError(error));}
   }
   async function toggle(){
-    try{await onUpdate(toggleDone(entry));}
+    try{await onUpdate((current)=>toggleDone(current));}
     catch(error){onError(readableError(error));}
   }
   const actionText={color:p.accent,fontSize:14,fontWeight:'800' as const};
@@ -298,9 +298,6 @@ function LoadedIdeaApp({spec}: {spec:IdeaSpec}){
       }},
     ]);
   }
-  async function update(entry:Entry):Promise<void>{
-    await store.update(entry.id,()=>entry);
-  }
   async function share(ext:'csv'|'json'){
     setBusy(true);setError(null);
     try{
@@ -416,7 +413,7 @@ function LoadedIdeaApp({spec}: {spec:IdeaSpec}){
         </View>:null}
         <ReadOnlyRecord entry={entry} spec={spec} p={p} visual={visual} expanded={revealed===entry.id}/>
         <RowActions spec={spec} entry={entry} p={p} busy={busy||store.loading}
-          onEdit={edit} onDelete={remove} onUpdate={update} onError={setError}
+          onEdit={edit} onDelete={remove} onUpdate={(transform)=>store.update(entry.id,transform)} onError={setError}
           expanded={revealed===entry.id} setExpanded={()=>setRevealed(old=>old===entry.id?null:entry.id)}/>
       </View>)}
     </View>

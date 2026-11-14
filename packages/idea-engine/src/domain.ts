@@ -152,7 +152,8 @@ export function calculate(spec:IdeaSpec, entry:Entry):Metric|null {
     }
     case 'sum':{
       const field=spec.fields.find(f=>f.type==='number');
-      return field?m(get(field.key),field.label):null;
+      if(!field || !v[field.key]?.trim())return null;
+      return m(get(field.key),field.label);
     }
   }
 }
@@ -259,6 +260,7 @@ export function validateBackup(spec:IdeaSpec,payload:unknown):Entry[]{
     if(seen.has(row.id))throw new TypeError('Duplicate backup record');
     seen.add(row.id);
     const clean=makeEntry(spec,row.id,values as Record<string,string>,row.createdAt);
+    ensureUnique(spec,clean,output);
     output.push({...clean,done:row.done as boolean,count:row.count as number});
   }
   return output;
