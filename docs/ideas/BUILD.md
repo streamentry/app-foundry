@@ -44,7 +44,7 @@ All app names, app IDs and icons are internal, temporary and not trademark-clear
 - Payment/RevenueCat, backend, authentication, synchronized collaboration and auto-backups.
 - Distribution/keyword validation, real competition research and user willingness-to-pay evidence.
 - Data import via platform file picker; JSON restore currently uses manual paste with schema validation and confirmation.
-- A committed dependency lockfile; CI is still not reproducible until \`npm ci\` is adopted.
+- A committed lockfile now makes clean installs reproducible with `npm ci`. Release QA, signing, and native device testing remain outstanding.
 
 ## Security and safety boundaries
 
@@ -52,7 +52,7 @@ Sensitive family, health, pet, financial, or emergency notes can be recorded loc
 
 ## Technical debt and next design decisions
 
-1. Finish CI, commit a lockfile, and test representative native builds on iOS and Android.
+1. Verify clean `npm ci` installs in CI, then test real native builds on iOS and Android.
 2. Fix data lifecycle faults, define schema migrations, and test recoverability; exported CSV is not importable.
 3. Review app-specific function/accuracy and competitive differentiation. Many ideas still need core category features (camera, actual widgets, evidence attachments).
 4. Pick at most 1–2 genuinely validated apps to elevate from research prototype to publishable consumer experience.

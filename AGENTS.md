@@ -33,7 +33,7 @@ Build useful, original, accessible mobile utilities with measurable demand. Corr
 - `apps/*` owns brand, product logic and store identity. `packages/*` contains narrowly scoped shared contracts or proven reusable behavior.
 - Default offline-first, no mandatory account, no undisclosed telemetry; `EXPO_PUBLIC_*` variables are public.
 - Request permissions at point of need. Never put keys, signing assets, credentials or personal data into repo or logs.
-- Pin dependencies with a lockfile once generated. Never bypass CI or force-push to solve warnings.
+- Keep `package-lock.json` committed and synchronized with workspace manifests. Use `npm ci` in CI; update the lockfile intentionally with `npm install` and review dependency diffs. Never bypass CI or force-push to solve warnings.
 
 ## Authority boundary
 

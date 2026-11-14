@@ -8,7 +8,7 @@ Expo SDK 58 + React Native + TypeScript with app-specific branding and screens. 
 
 Requirements: Node 22+, npm 10+, iOS Xcode/Simulator or Android Studio for native runtime.
 
-    npm install
+    npm ci
     npm run check
     npm run lint
     npm run doctor
@@ -50,7 +50,7 @@ Read docs/PORTFOLIO.md, AGENTS.md, DESIGN.md, ARCHITECTURE.md, docs/SDLC.md, and
 
 Each app owns its user workflows and design composition, not just a color skin.
 
-**Unfinished:** generated dependency lockfile and npm ci, real iOS/Android device QA, accessible interaction review, original branding, store registration and privacy disclosures. Do not publish yet.
+**Dependency installs:** Commit `package-lock.json` and use `npm ci` in CI and for a clean local checkout. **Still unfinished:** real iOS/Android device QA, accessible interaction review, original branding, store registration and privacy disclosures. Do not publish yet.
 
 
 ## 100 additional working research prototypes
