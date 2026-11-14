@@ -12,6 +12,7 @@ From repository root after installing dependencies:
     npm run shift:start
     npm run shift:ios
     npm run shift:android
+    npm run bundle:shift
 
 Or run from \`apps/shift-calendar\` with \`npm run start\`. Local iOS requires Xcode/Simulator and Android requires Android Studio/emulator.
 
