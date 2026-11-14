@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import {
   DateField, ErrorLine, Field, Screen, Tap, TimeField,
-  dayKey, uniqueId, useLocalRecords,
+  uniqueId, useLocalRecords,
 } from '@foundry/mobile-kit';
 import {
   calculate, cleanValues, daysBetween, ensureUnique, findSpec, increment,
@@ -268,7 +268,6 @@ function LoadedIdeaApp({spec}: {spec:IdeaSpec}){
   const filtered=all.filter(entry=>
     !search.trim()||Object.values(entry.values).some(value=>value.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase())),
   );
-  const summary=summarize(spec,store.records,todayKey());
   const formRadius=radius(visual);
   const updating=(newValues:Record<string,string>)=>setValues(newValues);
 
