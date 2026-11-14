@@ -40,7 +40,12 @@
     "idea:lab": "npm run start -w @foundry/idea-lab",
     "idea:start": "node scripts/start-idea.mjs",
     "idea:verify": "node scripts/verify-idea-apps.mjs",
-    "idea:smoke": "node scripts/smoke-ideas.mjs"
+    "idea:smoke": "node scripts/smoke-ideas.mjs",
+    "cash:start": "npm run start -w @foundry/idea-cash-float-count",
+    "cash:ios": "npm run ios -w @foundry/idea-cash-float-count",
+    "cash:android": "npm run android -w @foundry/idea-cash-float-count",
+    "cash:test": "npm run test -w @foundry/idea-cash-float-count",
+    "cash:bundle": "npm run bundle -w @foundry/idea-cash-float-count"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

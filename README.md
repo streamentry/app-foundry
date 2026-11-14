@@ -66,3 +66,13 @@ npm run idea:smoke                       # representative iOS + Android JS bundl
 ```
 
 Read [implementation status](docs/ideas/BUILD.md) and [device QA checklist](docs/ideas/QA.md). Store release requires original individual UX and design, not just this working prototype.
+
+## First promoted research candidate — Counter Close
+
+Cash Drawer Count (idea 012) now has a **bespoke standalone counting workflow**, separate from the generic Idea Lab renderer. It supports four currency presets, physical bill/coin counts, optional POS over/short reconciliation, local draft recovery, receipt history, and deliberate CSV/JSON backup. This is a **technical release candidate, not a validated or published app**.
+
+    npm run cash:start
+    npm run cash:test
+    npm run cash:bundle
+
+Read the [product README](apps/ideas/cash-float-count/README.md), [receipt-led design](docs/design/apps/cash-float-count.md), and [merchant research test](docs/research/CASH_CLOSE_PILOT.md).

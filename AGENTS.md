@@ -53,3 +53,7 @@ Acceptance criteria + verified tests + human device QA + privacy/security/access
 - Preserve strict validation of imported JSON, CSV formula injection protection, user-confirmed destructive actions, and accessibility semantics.
 - Verify with `npm run idea:verify`, `npm run check`, `npm run lint` and `npm run idea:smoke` and report actual results, not assumptions.
 - Treat README scoring and keyword estimates as unvalidated hypotheses. No brand, medical, tax or legal claims without appropriate evidence.
+
+## Counter Close cash safety invariant
+
+For [Counter Close](apps/ideas/cash-float-count/README.md), preserve integer minor-unit cash arithmetic, strict money parsing, currency-specific denomination IDs, user-confirmed destructive actions, and separate storage for drafts, new saved closes, and legacy prototype records. Never silently re-interpret USD as VND, mix totals across currencies, claim certified POS accuracy, auto-upload drawer records, or overwrite unreadable drafts. Run the domain, theme-contrast and full monorepo suites before merging; physical-device cash UX remains a manual release gate.

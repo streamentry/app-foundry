@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import {
   CURRENCIES, PROFILES, denominations, parseMoney, formatMoney, digitsOnlyQuantity,
@@ -94,6 +95,7 @@ test('edit draft round-trip preserves all money values, including decimal curren
 test('backup round-trip validates schema, IDs, types and cross-app data',()=>{
   const row=makeSession(fresh('VND',{counts:{n500000:2}}),'row_1','2026-11-15T09:00:00Z');
   const json=exportBackup([row],'2026-11-15T09:30:00Z');
+  assert.deepEqual(validateSession(row),row);
   assert.deepEqual(importBackup(json),[row]);
   assert.throws(()=>importBackup('broken'),/JSON/);
   assert.throws(()=>importBackup(JSON.stringify({version:1,product:'cash-drawer-closeout',sessions:[row]})));
@@ -127,4 +129,27 @@ test('migration requires deliberate USD assumption, keeps originals and skips im
   assert.equal(appendLegacy([original,...imported],imported).length,2);
   assert.throws(()=>legacySessions(JSON.stringify({version:1,records:[old.records[0],old.records[0]]})),/Duplicate/);
   assert.throws(()=>legacySessions(JSON.stringify({version:1,records:[{...old.records[0],values:{hundreds:'-4'}}]})),/Invalid old/);
+});
+
+test('light/dark text contrast clears WCAG AA 4.5:1 across essential color pairs',()=>{
+  const source=readFileSync(new URL('../src/components.tsx',import.meta.url),'utf8');
+  const lum=color=>{
+    const parts=[1,3,5].map(i=>parseInt(color.slice(i,i+2),16)/255)
+      .map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);
+    return parts[0]*.2126+parts[1]*.7152+parts[2]*.0722;
+  };
+  const contrast=(a,b)=>{
+    const x=lum(a),y=lum(b);
+    return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);
+  };
+  for(const mode of ['DAY','NIGHT']){
+    const match=source.match(new RegExp('export const '+mode+':Colors=\\{([\\s\\S]*?)\\};'));
+    assert.ok(match,mode+' palette missing');
+    const palette=Object.fromEntries([...match[1].matchAll(/([a-zA-Z]+):'(#[0-9a-fA-F]{6})'/g)]
+      .map(item=>[item[1],item[2]]));
+    for(const [a,b] of [['ink','bg'],['ink','card'],['ink','receipt'],['sub','bg'],['sub','card'],
+      ['onBrand','brand'],['onFocus','focus'],['onDanger','danger']]){
+      assert.ok(contrast(palette[a],palette[b])>=4.5,mode+' '+a+'/'+b+' contrast insufficient');
+    }
+  }
 });

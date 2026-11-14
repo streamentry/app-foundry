@@ -60,6 +60,7 @@ export default function CashCloseApp(){
   const [editingId,setEditingId]=useState<string|null>(null);
   const [selectedId,setSelectedId]=useState<string|null>(null);
   const [draftReady,setDraftReady]=useState(false);
+  const [draftWritable,setDraftWritable]=useState(true);
   const [draftStatus,setDraftStatus]=useState('Draft stays on this device');
   const [error,setError]=useState<string|null>(null);
   const [busy,setBusy]=useState(false);
@@ -80,19 +81,19 @@ export default function CashCloseApp(){
             if(recovered){
               setDraft(recovered.draft);setEditingId(recovered.editingId);
               setDraftStatus('Recovered unfinished count');
-            }else setError('An old unfinished draft was not readable. No saved close records were changed.');
-          }catch{setError('Could not read unfinished draft. Close history was not changed.');}
+            }else {setDraftWritable(false);setError('The unfinished draft cannot be read. It has been preserved; choose whether to discard it.');}
+          }catch{setDraftWritable(false);setError('The unfinished draft could not be parsed. It has not been overwritten.');}
         }
         if(old){
           try{setLegacy(legacySessions(old));}
           catch(failure){setLegacyError('Old prototype data needs manual review: '+errorMessage(failure));}
         }
-      }).catch(failure=>{if(mounted)setError('Could not load draft: '+errorMessage(failure));})
+      }).catch(failure=>{if(mounted){setDraftWritable(false);setError('Could not load draft; it was not overwritten: '+errorMessage(failure));}})
       .finally(()=>{if(mounted)setDraftReady(true);});
     return()=>{mounted=false;};
   },[]);
   useEffect(()=>{
-    if(!draftReady)return;
+    if(!draftReady||!draftWritable)return;
     const timer=setTimeout(()=>{
       const payload=JSON.stringify({version:1,draft,editingId});
       const next=writes.current.catch(()=>undefined).then(()=>Storage.setItem(DRAFT_KEY,payload));
@@ -101,7 +102,7 @@ export default function CashCloseApp(){
         .catch(failure=>setError('Could not save draft: '+errorMessage(failure)));
     },350);
     return()=>clearTimeout(timer);
-  },[draft,draftReady,editingId]);
+  },[draft,draftReady,draftWritable,editingId]);
 
   const valid=useMemo(()=>{
     try{return store.records.map(validateSession);}
@@ -148,7 +149,7 @@ export default function CashCloseApp(){
     }else clear();
   }
   async function saveCount(){
-    if(!draftReady||busy||store.loading||!valid)return;
+    if(!draftReady||!draftWritable||busy||store.loading||!valid)return;
     setBusy(true);setError(null);
     try{
       const old=editingId?entries.find(s=>s.id===editingId):null;
@@ -208,6 +209,17 @@ export default function CashCloseApp(){
         }},
       ]);
   }
+  function discardUnreadableDraft(){
+    Alert.alert('Discard unreadable draft?','Only the unfinished draft will be cleared. Previously saved close records remain untouched.',[
+      {text:'Keep stored draft',style:'cancel'},
+      {text:'Discard draft',style:'destructive',onPress:()=>{
+        void Storage.removeItem(DRAFT_KEY).then(()=>{
+          setDraft(emptyDraft(preferredCurrency()));setEditingId(null);
+          setDraftWritable(true);setDraftStatus('New draft started');setError(null);
+        }).catch(failure=>setError('Draft could not be removed: '+errorMessage(failure)));
+      }},
+    ]);
+  }
   function importOld(){
     if(!valid||pendingLegacy.length===0)return;
     Alert.alert('Import old prototype records?',
@@ -252,6 +264,11 @@ export default function CashCloseApp(){
       {error||store.error?<View style={{backgroundColor:c.card,padding:14,borderWidth:1,borderColor:c.danger,borderRadius:12}}>
         <Text accessibilityRole="alert" style={{color:c.ink,fontSize:15,lineHeight:23}}>{error||store.error}</Text>
       </View>:null}
+      {!draftWritable?<Panel c={c}>
+        <Text style={{color:c.ink,fontSize:17,fontWeight:'800'}}>Unreadable draft is protected</Text>
+        <Text style={{color:c.sub,fontSize:14,lineHeight:22}}>The app will not replace your original draft until you explicitly discard it. Saved history is separate.</Text>
+        <Action c={c} kind="danger" onPress={discardUnreadableDraft}>Discard unreadable draft</Action>
+      </Panel>:null}
       {!draftReady||store.loading?<Text accessibilityRole="alert" style={{fontSize:15,color:c.sub}}>Opening on-device records…</Text>:null}
       {valid===null&&!store.loading?<Panel c={c}>
         <Text style={{color:c.ink,fontWeight:'900',fontSize:18}}>Saved record format needs attention</Text>
@@ -315,7 +332,7 @@ export default function CashCloseApp(){
               onChange={n=>setQuantity(item.id,n)}/>)}
           </Panel>;
         })}
-        <Action c={c} disabled={!draftReady||store.loading||valid===null} onPress={()=>go('review')}>Review this count →</Action>
+        <Action c={c} disabled={!draftReady||!draftWritable||store.loading||valid===null} onPress={()=>go('review')}>Review this count →</Action>
         <Action c={c} kind="outline" onPress={startOver}>Clear and start fresh</Action>
       </>:null}
 
@@ -379,7 +396,7 @@ export default function CashCloseApp(){
             maxLength={500} placeholder="Explain a discrepancy or note a handover"
             onChange={note=>setDraft(old=>({...old,note}))}/>
         </Panel>
-        <Action c={c} disabled={!draftReady||busy||store.loading||valid===null}
+        <Action c={c} disabled={!draftReady||!draftWritable||busy||store.loading||valid===null}
           onPress={()=>{void saveCount();}}>
           {editingId?'Save corrected close':'Save close on this device'}
         </Action>

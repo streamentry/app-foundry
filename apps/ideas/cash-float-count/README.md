@@ -20,7 +20,7 @@ Counter Close is a receipt-inspired tool for a shop owner or cashier who counts 
 From the monorepo root with Node 22 and npm 10+:
 
     npm ci
-    npm run idea:start -- cash-float-count
+    npm run cash:start
     npm run test -w @foundry/idea-cash-float-count
     npm run typecheck -w @foundry/idea-cash-float-count
     npm run bundle -w @foundry/idea-cash-float-count
@@ -57,3 +57,5 @@ No payment taking, tax or accounting certification, multi-user approvals, automa
 Read the [design direction](../../../docs/design/apps/cash-float-count.md), [merchant trial plan](../../../docs/research/CASH_CLOSE_PILOT.md), and [native QA](../../../docs/ideas/QA.md). Before public submission: clear name/IP and privacy, test actual device persistence and export/restore, verify denominations, capture real usability feedback and prepare signed builds/assets.
 
 **Decision threshold (hypothesis, not actual evidence):** 4 of 5 qualified merchants complete a simulated close without coaching, 3 opt to repeat it, and at least 2 demonstrate real payment or workflow-switching intent. If this fails, stop adding features until the workflow is improved.
+
+**Unreadable draft safety:** if the draft schema cannot be opened, Counter Close preserves the original key and blocks saving until the user explicitly confirms discarding that unreadable draft. Saved history uses a separate key and is unaffected.
