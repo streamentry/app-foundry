@@ -78,7 +78,7 @@ test('optional ledger amounts do not crash summaries or blank records',()=>{
   const row=makeEntry(spec,'no_amount',values);
   assert.equal(calculate(spec,row),null);
   assert.doesNotThrow(()=>summarize(spec,[row],'2028-02-29'));
-  assert.equal(summarize(spec,[row],'2028-02-29').main,'0');
+  assert.equal(summarize(spec,[row],'2028-02-29').main,'1'); // Register displays record count, not optional amount.
 });
 test('backup restore rejects duplicate invoice identifiers (case-insensitive)',()=>{
   const spec=by('invoice-number-ledger');
