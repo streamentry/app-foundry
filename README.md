@@ -1,39 +1,53 @@
 # App Foundry
 
-A lean, experiment-led React Native / Expo monorepo for **independent mobile utilities**.
+**Ten independent offline-first mobile utilities, one engineering foundation.**
 
-## First product: Shift Calendar (MVP)
+Expo SDK 58 + React Native + TypeScript with app-specific branding and screens. The internal design gallery remains in apps/starter.
 
-The first functional app is [Shift Calendar](apps/shift-calendar/README.md), a local-first shift scheduler with day/month calendar, customizable shifts, non-destructive repeating rotations, opt-in local reminders, CSV export and deletion controls.
+## Run
 
-\`\`\`sh
-npm install
-npm run doctor
-npm run check
-npm run bundle:shift
-npm run shift:start
-# npm run shift:ios
-# npm run shift:android
-\`\`\`
+Requirements: Node 22+, npm 10+, iOS Xcode/Simulator or Android Studio for native runtime.
 
-The earlier [design gallery](apps/starter/) remains available with \`npm run start\`.
+    npm install
+    npm run check
+    npm run lint
+    npm run doctor
+    npm run plant-watering:start
 
-## Monorepo map
+## Products
 
-- \`apps/shift-calendar/\` — functional first product (pre-release).
-- \`apps/starter/\` — independent design identities gallery, **not** a product to publish.
-- \`packages/design-system/\` — semantic themes and contrast test contracts, not a shared consumer UI.
-- \`packages/core/\` — small, pure, reusable primitives.
-- \`docs/\` — market experiments, app design briefs, security and agentic SDLC.
+| Directory | Product |
+| --- | --- |
+| apps/shift-calendar | Signal: rotating shifts and work schedules |
+| apps/countdown-widget | Orbit Countdown |
+| apps/medication-checklist | Clarity Medication Log |
+| apps/baby-feeding-log | Nest Baby Log |
+| apps/plant-watering | Canopy Plant Care |
+| apps/pet-medication | Companion Pet Care |
+| apps/mileage-log | Ledger Mileage |
+| apps/warranty-tracker | Archive Warranty |
+| apps/cleaning-schedule | Tempo Household |
+| apps/elderly-routine | Daylight Routine |
 
-## Engineering loop
+Run any product with npm run <app-slug>:start, e.g. npm run mileage-log:start, or with npm run ios -w @foundry/<app-slug>.
 
-1. Write \`docs/templates/EXPERIMENT.md\`; validate target audience, demand and distribution.
-2. Write \`docs/templates/APP-DESIGN-BRIEF.md\`; ensure distinct user flows, not palette-swapped clones.
-3. Implement a reversible, offline-first MVP; test domain logic and visual/native behavior.
-4. Run \`npm run check && npm run lint && npm run doctor\`; run \`npm run format:check\` after formatting baseline.
-5. Review with target users, measure organic acquisition/activation and net revenue, improve or archive.
+## Testing
 
-Read \`AGENTS.md\`, \`DESIGN.md\`, \`ARCHITECTURE.md\`, \`docs/SDLC.md\` and the app's README.
+    npm run check
+    npm run lint
+    npm run doctor
+    npm run bundle:portfolio
 
-**Production blockers:** Generate and commit \`package-lock.json\`, change CI to \`npm ci\`, run native simulator/device QA, finalize brand/icon/privacy URL, configure signing and release pipeline. Nothing is automatically published.
+The CI pipeline also bundles Shift Calendar. Bundling is **not a signed native build** and does not verify actual device functionality.
+
+Read docs/PORTFOLIO.md, AGENTS.md, DESIGN.md, ARCHITECTURE.md, docs/SDLC.md, and the relevant app README.
+
+## Shared foundations
+
+- packages/design-system: unique semantic identities and contrast tests.
+- packages/mobile-kit: date utilities, serial local SQLite KV persistence, accessible input primitives.
+- packages/core: earlier domain-independent primitives.
+
+Each app owns its user workflows and design composition, not just a color skin.
+
+**Unfinished:** generated dependency lockfile and npm ci, real iOS/Android device QA, accessible interaction review, original branding, store registration and privacy disclosures. Do not publish yet.

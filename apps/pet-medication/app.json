@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Companion Pet Care Preview",
+    "slug": "foundry-pet-medication",
+    "scheme": "foundry-pet-medication",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.petmedication.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.petmedication.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

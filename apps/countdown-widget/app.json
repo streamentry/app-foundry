@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Orbit Countdown Preview",
+    "slug": "foundry-countdown-widget",
+    "scheme": "foundry-countdown-widget",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.countdownwidget.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.countdownwidget.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

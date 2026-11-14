@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Clarity Medication Log Preview",
+    "slug": "foundry-medication-checklist",
+    "scheme": "foundry-medication-checklist",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.medicationchecklist.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.medicationchecklist.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Canopy Plant Care Preview",
+    "slug": "foundry-plant-watering",
+    "scheme": "foundry-plant-watering",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.plantwatering.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.plantwatering.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

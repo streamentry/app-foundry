@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Tempo Household Preview",
+    "slug": "foundry-cleaning-schedule",
+    "scheme": "foundry-cleaning-schedule",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.cleaningschedule.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.cleaningschedule.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

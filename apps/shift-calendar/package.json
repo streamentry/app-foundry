@@ -9,7 +9,8 @@
     "android": "expo start --android",
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test ./tests/*.test.mjs",
-    "bundle": "expo export --platform ios --output-dir dist-ios && expo export --platform android --output-dir dist-android"
+    "bundle": "expo export --platform ios --output-dir dist-ios && expo export --platform android --output-dir dist-android",
+    "doctor": "expo install --check"
   },
   "dependencies": {
     "expo": "~58.0.25",

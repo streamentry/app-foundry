@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Ledger Mileage Preview",
+    "slug": "foundry-mileage-log",
+    "scheme": "foundry-mileage-log",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.mileagelog.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.mileagelog.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
