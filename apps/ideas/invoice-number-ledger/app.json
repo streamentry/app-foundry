@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Invoice Number Ledger Test",
+    "slug": "foundry-idea-011",
+    "scheme": "foundry-idea-011",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i011"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i011"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

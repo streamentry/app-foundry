@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Family Document Expiry Test",
+    "slug": "foundry-idea-051",
+    "scheme": "foundry-idea-051",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i051"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i051"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

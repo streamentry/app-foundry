@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Private Tutor Lesson Log Test",
+    "slug": "foundry-idea-078",
+    "scheme": "foundry-idea-078",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i078"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i078"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

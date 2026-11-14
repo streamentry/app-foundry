@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Exam Syllabus Tracker Test",
+    "slug": "foundry-idea-074",
+    "scheme": "foundry-idea-074",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i074"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i074"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

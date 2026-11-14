@@ -1,0 +1,1715 @@
+{
+  "schema": 1,
+  "generated": "2026-11-14",
+  "status": "unvalidated hypotheses",
+  "count": 100,
+  "scoring": {
+    "intent": 5,
+    "pay": 5,
+    "repeat": 3,
+    "fast": 4,
+    "safe": 3
+  },
+  "ideas": [
+    {
+      "id": "001",
+      "slug": "timesheet-rounding",
+      "name": "Timesheet Rounding Audit",
+      "category": "Work & field operations",
+      "icp": "Hourly contractors",
+      "job": "Compare actual and rounded punch times",
+      "query": "timesheet rounding calculator",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "002",
+      "slug": "oncall-handoff",
+      "name": "On-call Handoff Cards",
+      "category": "Work & field operations",
+      "icp": "Tiny IT teams",
+      "job": "Capture incident handovers offline",
+      "query": "on call handoff checklist",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 83
+    },
+    {
+      "id": "003",
+      "slug": "truck-pretrip",
+      "name": "Driver Pre-Trip Checklist",
+      "category": "Work & field operations",
+      "icp": "Delivery drivers",
+      "job": "Document vehicle inspections",
+      "query": "pre trip inspection checklist",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 3
+      },
+      "score": 77
+    },
+    {
+      "id": "004",
+      "slug": "field-visit-log",
+      "name": "Client Visit Journal",
+      "category": "Work & field operations",
+      "icp": "Solo field salespeople",
+      "job": "Record visit outcomes and follow-ups",
+      "query": "client visit report app",
+      "ratings": {
+        "intent": 4,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 79
+    },
+    {
+      "id": "005",
+      "slug": "overtime-shift-notes",
+      "name": "Overtime Shift Notes",
+      "category": "Work & field operations",
+      "icp": "Hourly workers",
+      "job": "Record overtime independently of payroll",
+      "query": "overtime hours tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 83
+    },
+    {
+      "id": "006",
+      "slug": "equipment-checkout",
+      "name": "Equipment Checkout Ledger",
+      "category": "Work & field operations",
+      "icp": "Small workshops",
+      "job": "Track borrowed tools and returns",
+      "query": "tool checkout tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "007",
+      "slug": "freelancer-deposit",
+      "name": "Freelance Deposit Tracker",
+      "category": "Work & field operations",
+      "icp": "Solo creatives",
+      "job": "Reconcile deposits against project balances",
+      "query": "freelance deposit tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 84
+    },
+    {
+      "id": "008",
+      "slug": "site-photo-log",
+      "name": "Site Progress Photo Log",
+      "category": "Work & field operations",
+      "icp": "Small contractors",
+      "job": "Capture dated site work evidence",
+      "query": "construction daily photo log",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 3
+      },
+      "score": 77
+    },
+    {
+      "id": "009",
+      "slug": "job-application-followup",
+      "name": "Interview Follow-up Log",
+      "category": "Work & field operations",
+      "icp": "Job seekers",
+      "job": "Track stages and interview follow-ups",
+      "query": "job application tracker offline",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "010",
+      "slug": "service-warranty-jobs",
+      "name": "Repair Job Ledger",
+      "category": "Work & field operations",
+      "icp": "Repair technicians",
+      "job": "Record work, parts and follow-up",
+      "query": "repair job tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "011",
+      "slug": "invoice-number-ledger",
+      "name": "Invoice Number Ledger",
+      "category": "Small-business admin",
+      "icp": "Micro-business owners",
+      "job": "Avoid duplicate invoice numbers",
+      "query": "invoice number tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 87
+    },
+    {
+      "id": "012",
+      "slug": "cash-float-count",
+      "name": "Cash Drawer Count",
+      "category": "Small-business admin",
+      "icp": "Shop owners",
+      "job": "Count cash and reconcile till",
+      "query": "cash drawer counter app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 87
+    },
+    {
+      "id": "013",
+      "slug": "price-quote-history",
+      "name": "Quote Revision Tracker",
+      "category": "Small-business admin",
+      "icp": "Freelancers",
+      "job": "Store versions of price quotes",
+      "query": "quotation tracker app",
+      "ratings": {
+        "intent": 3,
+        "pay": 4,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 79
+    },
+    {
+      "id": "014",
+      "slug": "market-stall-stock",
+      "name": "Market Stall Stock Count",
+      "category": "Small-business admin",
+      "icp": "Weekend market vendors",
+      "job": "Count stock after stall hours",
+      "query": "market stall inventory",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "015",
+      "slug": "purchase-order-receipt",
+      "name": "PO Receipt Checklist",
+      "category": "Small-business admin",
+      "icp": "Micro-wholesalers",
+      "job": "Compare ordered and delivered items",
+      "query": "purchase order receiving app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 3
+      },
+      "score": 77
+    },
+    {
+      "id": "016",
+      "slug": "rental-deposit-ledger",
+      "name": "Rental Deposit Ledger",
+      "category": "Small-business admin",
+      "icp": "Small equipment renters",
+      "job": "Track deposits to return",
+      "query": "rental deposit tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "017",
+      "slug": "booth-sales-tally",
+      "name": "Craft Fair Sales Tally",
+      "category": "Small-business admin",
+      "icp": "Craft-market sellers",
+      "job": "Tally item sales without POS",
+      "query": "craft fair sales tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 84
+    },
+    {
+      "id": "018",
+      "slug": "commission-split",
+      "name": "Commission Split Worksheet",
+      "category": "Small-business admin",
+      "icp": "Independent agents",
+      "job": "Calculate commission split scenarios",
+      "query": "commission split calculator",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "019",
+      "slug": "service-contract-renewal",
+      "name": "Contract Renewal Calendar",
+      "category": "Small-business admin",
+      "icp": "Small B2B providers",
+      "job": "Track renewal dates and contacts",
+      "query": "contract renewal tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 87
+    },
+    {
+      "id": "020",
+      "slug": "simple-reorder-points",
+      "name": "Reorder Point Notebook",
+      "category": "Small-business admin",
+      "icp": "Tiny retailers",
+      "job": "Know what inventory to replenish",
+      "query": "reorder point inventory app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "021",
+      "slug": "home-filter-replacement",
+      "name": "Home Filter Replacement",
+      "category": "Home & property",
+      "icp": "Homeowners",
+      "job": "Track air and water filter replacement",
+      "query": "air filter replacement tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "022",
+      "slug": "appliance-maintenance",
+      "name": "Appliance Maintenance Diary",
+      "category": "Home & property",
+      "icp": "Homeowners",
+      "job": "Recall repair and servicing dates",
+      "query": "appliance maintenance tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 73
+    },
+    {
+      "id": "023",
+      "slug": "paint-color-archive",
+      "name": "Paint Color Archive",
+      "category": "Home & property",
+      "icp": "Home renovators",
+      "job": "Save precise room paint and finish codes",
+      "query": "paint color tracker app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "024",
+      "slug": "home-renovation-punchlist",
+      "name": "Renovation Snag List",
+      "category": "Home & property",
+      "icp": "Home renovators",
+      "job": "Document unfinished work per room",
+      "query": "home renovation punch list",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 77
+    },
+    {
+      "id": "025",
+      "slug": "household-meter-readings",
+      "name": "Utility Meter Readings",
+      "category": "Home & property",
+      "icp": "Renters and owners",
+      "job": "Compare manual meter readings",
+      "query": "water meter reading log",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 70
+    },
+    {
+      "id": "026",
+      "slug": "moving-box-inventory",
+      "name": "Moving Box Inventory",
+      "category": "Home & property",
+      "icp": "Moving households",
+      "job": "Find items by box number",
+      "query": "moving box inventory app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 84
+    },
+    {
+      "id": "027",
+      "slug": "home-dimensions",
+      "name": "Room Measurements Notebook",
+      "category": "Home & property",
+      "icp": "DIY homeowners",
+      "job": "Remember room and furniture dimensions",
+      "query": "room measurement log",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "028",
+      "slug": "key-handover",
+      "name": "Key Handover Record",
+      "category": "Home & property",
+      "icp": "Property caretakers",
+      "job": "Record who holds a physical key",
+      "query": "key handover register",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "029",
+      "slug": "septic-maintenance",
+      "name": "Septic Service Log",
+      "category": "Home & property",
+      "icp": "Rural homeowners",
+      "job": "Track septic servicing history",
+      "query": "septic tank maintenance log",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 73
+    },
+    {
+      "id": "030",
+      "slug": "smoke-alarm-test-log",
+      "name": "Smoke Alarm Test Log",
+      "category": "Home & property",
+      "icp": "Homeowners",
+      "job": "Record test dates and results",
+      "query": "smoke alarm testing app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 74
+    },
+    {
+      "id": "031",
+      "slug": "school-uniform-labels",
+      "name": "Kids Clothing Size Ledger",
+      "category": "Family & caregiving",
+      "icp": "Parents",
+      "job": "Remember sizes per child and brand",
+      "query": "kids clothing size tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "032",
+      "slug": "school-paperwork",
+      "name": "School Form Deadline Log",
+      "category": "Family & caregiving",
+      "icp": "Parents",
+      "job": "Track school paperwork deadlines",
+      "query": "school form tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 74
+    },
+    {
+      "id": "033",
+      "slug": "family-emergency-contacts",
+      "name": "Emergency Contact Card",
+      "category": "Family & caregiving",
+      "icp": "Families",
+      "job": "Store printable family emergency numbers",
+      "query": "emergency contact card app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 3
+      },
+      "score": 68
+    },
+    {
+      "id": "034",
+      "slug": "child-book-reading",
+      "name": "Children Reading Log",
+      "category": "Family & caregiving",
+      "icp": "Parents",
+      "job": "Remember books children have read",
+      "query": "kids reading log app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "035",
+      "slug": "elderly-visit-journal",
+      "name": "Family Visit Journal",
+      "category": "Family & caregiving",
+      "icp": "Adult children",
+      "job": "Record non-medical family visits",
+      "query": "elderly visit log",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 70
+    },
+    {
+      "id": "036",
+      "slug": "parent-teacher-meeting",
+      "name": "Teacher Meeting Notes",
+      "category": "Family & caregiving",
+      "icp": "Parents",
+      "job": "Capture teacher meeting action items",
+      "query": "parent teacher conference notes",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "037",
+      "slug": "family-heirloom-catalog",
+      "name": "Family Heirloom Catalog",
+      "category": "Family & caregiving",
+      "icp": "Families",
+      "job": "Record stories behind heirlooms",
+      "query": "family heirloom inventory",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 70
+    },
+    {
+      "id": "038",
+      "slug": "kids-chore-allowance",
+      "name": "Allowance Chore Record",
+      "category": "Family & caregiving",
+      "icp": "Parents",
+      "job": "Reconcile agreed chores and allowance",
+      "query": "kids allowance tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 70
+    },
+    {
+      "id": "039",
+      "slug": "caregiver-handoff",
+      "name": "Care Visit Handoff",
+      "category": "Family & caregiving",
+      "icp": "Non-medical family carers",
+      "job": "Record household tasks across visits",
+      "query": "caregiver visit checklist",
+      "ratings": {
+        "intent": 4,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 3
+      },
+      "score": 72
+    },
+    {
+      "id": "040",
+      "slug": "school-supply-inventory",
+      "name": "School Supply Tracker",
+      "category": "Family & caregiving",
+      "icp": "Families",
+      "job": "Avoid repurchasing existing supplies",
+      "query": "school supplies checklist app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "041",
+      "slug": "pet-vaccination-record",
+      "name": "Pet Vaccination Recordbook",
+      "category": "Pets & animals",
+      "icp": "Pet owners",
+      "job": "Store vet-issued vaccination dates",
+      "query": "pet vaccination record app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 70
+    },
+    {
+      "id": "042",
+      "slug": "pet-grooming-history",
+      "name": "Pet Grooming Diary",
+      "category": "Pets & animals",
+      "icp": "Dog owners",
+      "job": "Remember grooming cadence and visits",
+      "query": "pet grooming tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "043",
+      "slug": "aquarium-water-parameters",
+      "name": "Aquarium Test Log",
+      "category": "Pets & animals",
+      "icp": "Aquarium keepers",
+      "job": "Chart water parameter readings",
+      "query": "aquarium water test log",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "044",
+      "slug": "horse-farrier-log",
+      "name": "Farrier Visit Log",
+      "category": "Pets & animals",
+      "icp": "Horse owners",
+      "job": "Track hoof-care appointments",
+      "query": "horse farrier tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "045",
+      "slug": "chicken-egg-tally",
+      "name": "Backyard Egg Collection",
+      "category": "Pets & animals",
+      "icp": "Chicken keepers",
+      "job": "Log daily egg yield by coop",
+      "query": "egg production tracker chickens",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "046",
+      "slug": "dog-walking-rounds",
+      "name": "Dog Walker Route Notes",
+      "category": "Pets & animals",
+      "icp": "Solo pet walkers",
+      "job": "Log each dog walk and handoff",
+      "query": "dog walking log app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "047",
+      "slug": "pet-sitting-handoff",
+      "name": "Pet Sitting Instructions",
+      "category": "Pets & animals",
+      "icp": "Pet sitters",
+      "job": "Keep visit instructions by pet",
+      "query": "pet sitting checklist",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "048",
+      "slug": "reptile-feeding-log",
+      "name": "Reptile Feeding Journal",
+      "category": "Pets & animals",
+      "icp": "Reptile keepers",
+      "job": "Record feeding and shedding dates",
+      "query": "reptile feeding tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 84
+    },
+    {
+      "id": "049",
+      "slug": "bird-molt-diary",
+      "name": "Bird Observation Log",
+      "category": "Pets & animals",
+      "icp": "Pet bird owners",
+      "job": "Record molts and dated observations",
+      "query": "bird care journal app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 67
+    },
+    {
+      "id": "050",
+      "slug": "pet-weight-record",
+      "name": "Pet Weight History",
+      "category": "Pets & animals",
+      "icp": "Pet owners",
+      "job": "Log weigh-ins without medical claims",
+      "query": "pet weight tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "051",
+      "slug": "passport-expiry-family",
+      "name": "Family Document Expiry",
+      "category": "Travel & vehicle",
+      "icp": "Traveling families",
+      "job": "Track passport expiration dates",
+      "query": "passport expiry reminder",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 81
+    },
+    {
+      "id": "052",
+      "slug": "packing-by-climate",
+      "name": "Travel Packing Template",
+      "category": "Travel & vehicle",
+      "icp": "Frequent travelers",
+      "job": "Reuse packing lists by climate",
+      "query": "packing list winter travel",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "053",
+      "slug": "vehicle-service-history",
+      "name": "Car Service Recordbook",
+      "category": "Travel & vehicle",
+      "icp": "Car owners",
+      "job": "Track maintenance by mileage",
+      "query": "car maintenance log app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "054",
+      "slug": "motorbike-maintenance",
+      "name": "Motorbike Maintenance Log",
+      "category": "Travel & vehicle",
+      "icp": "Motorbike commuters",
+      "job": "Track repairs and oil changes",
+      "query": "motorcycle maintenance log",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 84
+    },
+    {
+      "id": "055",
+      "slug": "roadtrip-fuel-cost",
+      "name": "Road Trip Fuel Ledger",
+      "category": "Travel & vehicle",
+      "icp": "Road travelers",
+      "job": "Track fuel purchases by trip",
+      "query": "road trip gas tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "056",
+      "slug": "luggage-weight-check",
+      "name": "Luggage Weight Planner",
+      "category": "Travel & vehicle",
+      "icp": "Air travelers",
+      "job": "Estimate packed bag weights",
+      "query": "luggage weight tracker app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "057",
+      "slug": "visa-document-checklist",
+      "name": "Visa Paperwork Checklist",
+      "category": "Travel & vehicle",
+      "icp": "Travelers",
+      "job": "Manage personal checklist without legal claims",
+      "query": "visa documents checklist",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 3
+      },
+      "score": 68
+    },
+    {
+      "id": "058",
+      "slug": "car-park-spot-note",
+      "name": "Parking Location Note",
+      "category": "Travel & vehicle",
+      "icp": "Drivers",
+      "job": "Remember garage and parking spot",
+      "query": "where did i park app",
+      "ratings": {
+        "intent": 2,
+        "pay": 2,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 64
+    },
+    {
+      "id": "059",
+      "slug": "toll-expense-journal",
+      "name": "Toll Expense Journal",
+      "category": "Travel & vehicle",
+      "icp": "Road travelers",
+      "job": "Record toll spending by trip",
+      "query": "toll expenses tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "060",
+      "slug": "campground-gear-list",
+      "name": "Camping Gear Checklist",
+      "category": "Travel & vehicle",
+      "icp": "Campers",
+      "job": "Reuse seasonal gear lists",
+      "query": "camping equipment checklist",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "061",
+      "slug": "knitting-row-counter",
+      "name": "Knitting Project Rows",
+      "category": "Hobbies & crafts",
+      "icp": "Knitters",
+      "job": "Track rows across projects",
+      "query": "knitting row counter",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "062",
+      "slug": "sewing-measurements",
+      "name": "Sewing Measurement Cards",
+      "category": "Hobbies & crafts",
+      "icp": "Sewists",
+      "job": "Keep person and garment measurements",
+      "query": "sewing measurements app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "063",
+      "slug": "fabric-stash",
+      "name": "Fabric Stash Inventory",
+      "category": "Hobbies & crafts",
+      "icp": "Quilters",
+      "job": "Find fabric quantities by category",
+      "query": "fabric stash tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "064",
+      "slug": "woodworking-cutlist",
+      "name": "Woodworking Cut List",
+      "category": "Hobbies & crafts",
+      "icp": "Woodworkers",
+      "job": "Prepare board cut dimensions",
+      "query": "woodworking cut list app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "065",
+      "slug": "ceramic-kiln-notes",
+      "name": "Pottery Firing Log",
+      "category": "Hobbies & crafts",
+      "icp": "Potters",
+      "job": "Track glaze and firing outcomes",
+      "query": "pottery kiln firing log",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "066",
+      "slug": "paint-mixing-swatches",
+      "name": "Paint Mix Notebook",
+      "category": "Hobbies & crafts",
+      "icp": "Artists",
+      "job": "Remember pigment recipes",
+      "query": "paint mixing recipe app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 71
+    },
+    {
+      "id": "067",
+      "slug": "film-roll-notes",
+      "name": "Analog Film Roll Log",
+      "category": "Hobbies & crafts",
+      "icp": "Film photographers",
+      "job": "Keep rolls and developing notes",
+      "query": "film photography log app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 84
+    },
+    {
+      "id": "068",
+      "slug": "guitar-practice-repertoire",
+      "name": "Guitar Repertoire Log",
+      "category": "Hobbies & crafts",
+      "icp": "Guitarists",
+      "job": "Track practice on pieces",
+      "query": "guitar practice log app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "069",
+      "slug": "boardgame-scorepad",
+      "name": "Board Game Score Sheets",
+      "category": "Hobbies & crafts",
+      "icp": "Board game fans",
+      "job": "Track custom multi-round scoring",
+      "query": "board game score tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "070",
+      "slug": "seed-germination-journal",
+      "name": "Seed Germination Diary",
+      "category": "Hobbies & crafts",
+      "icp": "Gardeners",
+      "job": "Track seed sow and sprouting",
+      "query": "seed germination tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "071",
+      "slug": "spelling-test-maker",
+      "name": "Spelling Practice Cards",
+      "category": "Learning & education",
+      "icp": "Parents",
+      "job": "Practice parent-entered spelling words",
+      "query": "spelling test practice app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "072",
+      "slug": "music-scale-practice",
+      "name": "Music Scales Checklist",
+      "category": "Learning & education",
+      "icp": "Music students",
+      "job": "Keep scales practice history",
+      "query": "piano scales practice tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "073",
+      "slug": "vocabulary-context-notes",
+      "name": "Vocabulary Sentence Journal",
+      "category": "Learning & education",
+      "icp": "Language learners",
+      "job": "Remember words with context",
+      "query": "vocabulary sentence notebook",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "074",
+      "slug": "exam-topic-checklist",
+      "name": "Exam Syllabus Tracker",
+      "category": "Learning & education",
+      "icp": "Exam candidates",
+      "job": "Prioritize unmastered topics",
+      "query": "exam topic checklist app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "075",
+      "slug": "lab-notebook-dates",
+      "name": "School Lab Observation Log",
+      "category": "Learning & education",
+      "icp": "Science students",
+      "job": "Record experiment observations",
+      "query": "science experiment log app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 70
+    },
+    {
+      "id": "076",
+      "slug": "phonics-practice-log",
+      "name": "Phonics Session Record",
+      "category": "Learning & education",
+      "icp": "Parents/tutors",
+      "job": "Note phonics practice by session",
+      "query": "phonics practice tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 73
+    },
+    {
+      "id": "077",
+      "slug": "reading-minute-journal",
+      "name": "Reading Minutes Journal",
+      "category": "Learning & education",
+      "icp": "Students",
+      "job": "Record focused reading minutes",
+      "query": "reading minutes tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "078",
+      "slug": "tutor-lesson-notes",
+      "name": "Private Tutor Lesson Log",
+      "category": "Learning & education",
+      "icp": "Tutors",
+      "job": "Track lesson content and homework",
+      "query": "tutor lesson log app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "079",
+      "slug": "math-error-notebook",
+      "name": "Math Mistake Notebook",
+      "category": "Learning & education",
+      "icp": "Exam students",
+      "job": "Revisit common solved mistakes",
+      "query": "math error log notebook",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 87
+    },
+    {
+      "id": "080",
+      "slug": "study-room-seat-timer",
+      "name": "Library Study Session Log",
+      "category": "Learning & education",
+      "icp": "University students",
+      "job": "Record focused study sessions",
+      "query": "study time log app",
+      "ratings": {
+        "intent": 2,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 69
+    },
+    {
+      "id": "081",
+      "slug": "subscription-renewal-offline",
+      "name": "Subscription Renewal Notebook",
+      "category": "Personal admin & money",
+      "icp": "Households",
+      "job": "Track manual recurring payments",
+      "query": "subscription renewal tracker offline",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "082",
+      "slug": "family-budget-envelopes",
+      "name": "Cash Envelope Ledger",
+      "category": "Personal admin & money",
+      "icp": "Cash-budget families",
+      "job": "Track balance by spending envelope",
+      "query": "cash envelope budget app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 73
+    },
+    {
+      "id": "083",
+      "slug": "tax-document-inbox",
+      "name": "Tax Document Checklist",
+      "category": "Personal admin & money",
+      "icp": "Freelancers",
+      "job": "Track gathered tax paperwork",
+      "query": "tax documents checklist app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 77
+    },
+    {
+      "id": "084",
+      "slug": "security-deposit-evidence",
+      "name": "Tenant Move-Out Evidence",
+      "category": "Personal admin & money",
+      "icp": "Renters",
+      "job": "Capture property condition at handover",
+      "query": "move out inspection app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 77
+    },
+    {
+      "id": "085",
+      "slug": "gift-history",
+      "name": "Gift Ideas and History",
+      "category": "Personal admin & money",
+      "icp": "Families",
+      "job": "Remember gifts and recipients",
+      "query": "gift tracker app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "086",
+      "slug": "charity-donation-ledger",
+      "name": "Donation Receipt Ledger",
+      "category": "Personal admin & money",
+      "icp": "Donors",
+      "job": "Record giving and receipt dates",
+      "query": "charitable donation tracker",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 5
+      },
+      "score": 70
+    },
+    {
+      "id": "087",
+      "slug": "shared-cost-split-offline",
+      "name": "Trip Cost Split Notebook",
+      "category": "Personal admin & money",
+      "icp": "Travel groups",
+      "job": "Settle manual shared expenses",
+      "query": "group travel expenses split",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 71
+    },
+    {
+      "id": "088",
+      "slug": "cash-savings-goals",
+      "name": "Cash Savings Jar",
+      "category": "Personal admin & money",
+      "icp": "Cash savers",
+      "job": "Log deposits toward goal",
+      "query": "savings goal tracker offline",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "089",
+      "slug": "bill-proof-record",
+      "name": "Bill Payment Evidence",
+      "category": "Personal admin & money",
+      "icp": "Households",
+      "job": "Log bills and last-paid confirmations",
+      "query": "bill payment tracker offline",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "090",
+      "slug": "inventory-insurance",
+      "name": "Personal Property Inventory",
+      "category": "Personal admin & money",
+      "icp": "Homeowners",
+      "job": "Catalog belongings for recovery records",
+      "query": "home contents inventory insurance",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "091",
+      "slug": "bike-tyre-pressure",
+      "name": "Bike Tire Pressure Log",
+      "category": "Additional specialist wedges",
+      "icp": "Cyclists",
+      "job": "Record tire setup by riding surface",
+      "query": "bike tire pressure log",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 74
+    },
+    {
+      "id": "092",
+      "slug": "ski-gear-service",
+      "name": "Ski Gear Service Log",
+      "category": "Additional specialist wedges",
+      "icp": "Skiers",
+      "job": "Track edge and wax servicing",
+      "query": "ski maintenance tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "093",
+      "slug": "wedding-vendor-deposits",
+      "name": "Wedding Vendor Deposit Log",
+      "category": "Additional specialist wedges",
+      "icp": "Couples",
+      "job": "Track venue and vendor deposits",
+      "query": "wedding payment tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 77
+    },
+    {
+      "id": "094",
+      "slug": "travel-medical-documents",
+      "name": "Travel Health Document List",
+      "category": "Additional specialist wedges",
+      "icp": "Traveling families",
+      "job": "Inventory required travel health documents without advice",
+      "query": "travel vaccine document checklist",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 4,
+        "safe": 3
+      },
+      "score": 64
+    },
+    {
+      "id": "095",
+      "slug": "home-plant-cuttings",
+      "name": "Plant Propagation Journal",
+      "category": "Additional specialist wedges",
+      "icp": "Plant collectors",
+      "job": "Track cuttings and rooted outcomes",
+      "query": "plant propagation tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 84
+    },
+    {
+      "id": "096",
+      "slug": "classroom-materials-checkout",
+      "name": "Classroom Materials Ledger",
+      "category": "Additional specialist wedges",
+      "icp": "Teachers",
+      "job": "Track loaned classroom resources",
+      "query": "classroom equipment checkout",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "097",
+      "slug": "freelance-retainer-hours",
+      "name": "Retainer Hours Ledger",
+      "category": "Additional specialist wedges",
+      "icp": "Freelance developers",
+      "job": "Reconcile prepaid hours against work",
+      "query": "retainer hours tracker",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    },
+    {
+      "id": "098",
+      "slug": "coffee-roast-journal",
+      "name": "Home Coffee Brew Journal",
+      "category": "Additional specialist wedges",
+      "icp": "Coffee hobbyists",
+      "job": "Record dose and flavor results per bean",
+      "query": "coffee brew log app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 4,
+        "fast": 5,
+        "safe": 5
+      },
+      "score": 77
+    },
+    {
+      "id": "099",
+      "slug": "small-event-rsvp",
+      "name": "Offline Guest RSVP Ledger",
+      "category": "Additional specialist wedges",
+      "icp": "Event organizers",
+      "job": "Track invite and attendance manually",
+      "query": "guest RSVP tracker app",
+      "ratings": {
+        "intent": 3,
+        "pay": 3,
+        "repeat": 3,
+        "fast": 5,
+        "safe": 4
+      },
+      "score": 71
+    },
+    {
+      "id": "100",
+      "slug": "craft-supply-reorder",
+      "name": "Craft Supply Reorder List",
+      "category": "Additional specialist wedges",
+      "icp": "Hobby sellers",
+      "job": "Track consumables and reorder thresholds",
+      "query": "craft supplies inventory app",
+      "ratings": {
+        "intent": 4,
+        "pay": 4,
+        "repeat": 4,
+        "fast": 4,
+        "safe": 4
+      },
+      "score": 80
+    }
+  ]
+}

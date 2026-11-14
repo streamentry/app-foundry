@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Allowance Chore Record Test",
+    "slug": "foundry-idea-038",
+    "scheme": "foundry-idea-038",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i038"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i038"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

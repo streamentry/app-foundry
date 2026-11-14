@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "App Foundry Idea Lab",
+    "slug": "app-foundry-idea-lab",
+    "scheme": "foundry-idea-lab",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idealab.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idealab.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

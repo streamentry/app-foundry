@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Guitar Repertoire Log Test",
+    "slug": "foundry-idea-068",
+    "scheme": "foundry-idea-068",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i068"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i068"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

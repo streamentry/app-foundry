@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Fabric Stash Inventory Test",
+    "slug": "foundry-idea-063",
+    "scheme": "foundry-idea-063",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i063"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i063"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

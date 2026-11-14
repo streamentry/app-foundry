@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Market Stall Stock Count Test",
+    "slug": "foundry-idea-014",
+    "scheme": "foundry-idea-014",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i014"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i014"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

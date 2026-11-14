@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "School Lab Observation Log Test",
+    "slug": "foundry-idea-075",
+    "scheme": "foundry-idea-075",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i075"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i075"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

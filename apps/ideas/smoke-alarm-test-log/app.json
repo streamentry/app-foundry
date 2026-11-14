@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Smoke Alarm Test Log Test",
+    "slug": "foundry-idea-030",
+    "scheme": "foundry-idea-030",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i030"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i030"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

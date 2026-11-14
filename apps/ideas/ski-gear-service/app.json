@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Ski Gear Service Log Test",
+    "slug": "foundry-idea-092",
+    "scheme": "foundry-idea-092",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i092"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i092"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

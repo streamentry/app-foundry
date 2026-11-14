@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Repair Job Ledger Test",
+    "slug": "foundry-idea-010",
+    "scheme": "foundry-idea-010",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i010"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i010"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

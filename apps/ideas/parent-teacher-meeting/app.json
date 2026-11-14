@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Teacher Meeting Notes Test",
+    "slug": "foundry-idea-036",
+    "scheme": "foundry-idea-036",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i036"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i036"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

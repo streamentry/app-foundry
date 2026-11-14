@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Farrier Visit Log Test",
+    "slug": "foundry-idea-044",
+    "scheme": "foundry-idea-044",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i044"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i044"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

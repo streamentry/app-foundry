@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Travel Packing Template Test",
+    "slug": "foundry-idea-052",
+    "scheme": "foundry-idea-052",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i052"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i052"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

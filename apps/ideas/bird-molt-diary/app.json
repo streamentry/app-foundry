@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Bird Observation Log Test",
+    "slug": "foundry-idea-049",
+    "scheme": "foundry-idea-049",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i049"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i049"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

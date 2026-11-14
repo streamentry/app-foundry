@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Board Game Score Sheets Test",
+    "slug": "foundry-idea-069",
+    "scheme": "foundry-idea-069",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i069"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i069"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

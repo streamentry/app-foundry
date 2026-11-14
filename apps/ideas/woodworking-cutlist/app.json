@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Woodworking Cut List Test",
+    "slug": "foundry-idea-064",
+    "scheme": "foundry-idea-064",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i064"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i064"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Retainer Hours Ledger Test",
+    "slug": "foundry-idea-097",
+    "scheme": "foundry-idea-097",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i097"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i097"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

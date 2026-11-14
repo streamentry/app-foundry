@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Cash Envelope Ledger Test",
+    "slug": "foundry-idea-082",
+    "scheme": "foundry-idea-082",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i082"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i082"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

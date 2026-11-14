@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Plant Propagation Journal Test",
+    "slug": "foundry-idea-095",
+    "scheme": "foundry-idea-095",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i095"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i095"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

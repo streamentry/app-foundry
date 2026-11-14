@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Bike Tire Pressure Log Test",
+    "slug": "foundry-idea-091",
+    "scheme": "foundry-idea-091",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i091"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i091"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

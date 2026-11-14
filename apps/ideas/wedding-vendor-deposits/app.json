@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Wedding Vendor Deposit Log Test",
+    "slug": "foundry-idea-093",
+    "scheme": "foundry-idea-093",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i093"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i093"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

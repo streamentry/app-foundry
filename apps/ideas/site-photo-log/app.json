@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Site Progress Photo Log Test",
+    "slug": "foundry-idea-008",
+    "scheme": "foundry-idea-008",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i008"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i008"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

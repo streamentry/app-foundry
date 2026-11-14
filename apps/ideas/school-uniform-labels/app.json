@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Kids Clothing Size Ledger Test",
+    "slug": "foundry-idea-031",
+    "scheme": "foundry-idea-031",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i031"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i031"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

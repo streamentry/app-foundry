@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Septic Service Log Test",
+    "slug": "foundry-idea-029",
+    "scheme": "foundry-idea-029",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.idea.i029"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.idea.i029"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
