@@ -31,3 +31,16 @@ Apple's recent Liquid Glass guidance distinguishes floating controls from brande
 6. Measure successful task completion and comprehension before polishing decoration.
 
 **Stop condition:** if two apps can swap palettes and still look or behave nearly identical, redesign before release.
+
+
+## Idea Lab is not a consumer design system
+
+The 100 new `apps/ideas/*` packages currently use a **shared research UX renderer** with category-based color tokens and workflow-specific composition. This enables real user testing of a specific job; it does **not** meet the standard of distinct production brands for each app.
+
+Before promoting an idea to a consumer release:
+1. Write a bespoke design brief using `docs/templates/APP-DESIGN-BRIEF.md`.
+2. Replace the generic renderer with a first-screen experience optimized for its specific user task.
+3. Validate novelty against competing screenshots and App Store Guideline 4.3.
+4. Verify accessibility, dark mode, platform conventions, user delight and the full data lifecycle on real devices.
+
+A palette swap or changing the app name is never an acceptable differentiation strategy.
