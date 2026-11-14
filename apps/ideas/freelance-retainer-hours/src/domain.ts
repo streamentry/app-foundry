@@ -93,7 +93,8 @@ const safeText=(value:unknown,max:number,label:string,required:boolean):string=>
   if(typeof value!=='string')throw new TypeError('Invalid '+label);
   const trimmed=value.trim();
   if(trimmed.length>max||(required&&!trimmed))throw new RangeError('Invalid '+label);
-  if(/[\u0000-\u0008\u000b\u000e-\u001f]/.test(trimmed))throw new RangeError('Control character in '+label);
+  if([...trimmed].some(char=>{const code=char.charCodeAt(0);return code<=8||code===11||(code>=14&&code<=31);}))
+    throw new RangeError('Control character in '+label);
   return trimmed;
 };
 function checkId(id:string,createdAt:string):void {
