@@ -102,10 +102,10 @@ function checkId(id:string,createdAt:string):void {
 }
 export function emptyAgreement(day:string=localDay()):AgreementInput {
   return {client:'',project:'',from:firstOfMonth(day),to:daysInMonth(day),
-    hours:'10',minutes:'0',note:''};
+    hours:'0',minutes:'0',note:''};
 }
 export function emptyLine(day:string=localDay(),action:LineKind='work'):LineInput {
-  return {day,action,hours:'0',minutes:'30',description:''};
+  return {day,action,hours:'0',minutes:'0',description:''};
 }
 export function makeAgreement(input:AgreementInput,id:string,
   createdAt:string=new Date().toISOString(),state:AgreementState='open'):Agreement {
@@ -261,7 +261,7 @@ export function statement(agreement:Agreement,entries:readonly Line[]):string {
     'Project: '+agreement.project,
     'Period: '+agreement.from+' to '+agreement.to,
     'Opening hours: '+displayDuration(b.committed),
-    'Additional approved hours recorded: '+displayDuration(b.credited),
+    'Additional hours recorded (verify client approval): '+displayDuration(b.credited),
     'Work logged: '+displayDuration(b.delivered),
     b.remaining>=0?'Remaining: '+displayDuration(b.remaining):'Overage: '+displayDuration(b.overage),
     '',
