@@ -1,32 +1,32 @@
 # Architecture
 
-## Strategy
+The repository hosts **distinct products**, not a single repackaged app.
 
-Build focused consumer apps, not a generic factory. `app-foundry` shares engineering contracts, accessibility and semantics—not a single brand appearance.
+\`\`\`text
+apps/starter/                  Expo design gallery; not a consumer product
+apps/shift-calendar/           First usable shift scheduler
+  app/                         Expo Router: home, edit, rotation, settings
+  src/domain/                  Pure calendar/rotation/payroll-exclusion logic
+  src/data/                    Local SQLite; atomic inserts and parameterized writes
+  src/services/                Optional local reminders and CSV export
+  src/ui/                      App-local Signal visual/interaction design
+  tests/                       Pure Node TypeScript domain tests
+packages/core/                 Pure shared code, if proven needed
+packages/design-system/        Semantic themes and contract tests
+docs/                          Product and design playbooks
+.github/workflows/             CI
+\`\`\`
 
-```text
-apps/starter/                 Expo SDK 58, Expo Router visual design lab
-  app/                       File-based routes for gallery + per-app preview
-  src/components/            Gallery-only visual compositions
-packages/core/               Pure domain-agnostic logic, unit tests
-packages/design-system/      Platform-agnostic named palettes, distinct themes, tests
-docs/design/                 App-specific visual/interaction briefs
-.github/workflows/           Typecheck, test, lint and Expo validation
-```
+## Boundaries
 
-## Dependency boundaries
+- React Native 0.88 + Expo SDK 58 + TypeScript strict + Expo Router, npm workspaces.
+- \`apps/*\` owns product data model, navigation, brand identity, platform permissions, and release metadata.
+- \`packages/design-system\` exports only semantic accessibility and brand tokens; screens are app-specific. Shared UI is allowed only after true reuse.
+- SQLite is local, device-contained and has no remote API. One shift per starting calendar date. Date-only keys avoid day shifting due to UTC conversion.
+- Rotation inserts use an exclusive transaction with \`INSERT OR IGNORE\` so manual edits and off days are never overwritten.
+- Optional local notifications are user-approved and schedule a rolling 30-day window, maximum 32 pending. They are best effort, not guaranteed.
+- CSV export uses OS share sheet. Notes are spreadsheet-formula escaped; no background uploads.
+- No account, subscription, tracking, analytics, location, cloud sync or runtime-generated remote code.
+- User actions and irreversible operations require confirmation; publishing/signing requires human approval.
 
-- npm workspaces and TypeScript strict; React Native 0.88 and Expo SDK 58.
-- `packages/design-system` has **no React Native dependency**: it exports semantic color/typography/shape/density profiles and the common accessibility contract. This makes tokens testable without device tooling.
-- Screen compositions in `apps/starter/src/components/ThemeHero.tsx` are **design prototypes**, not a reusable consumer UI kit; real apps own their screens and business logic.
-- Product UI ownership stays within `apps/<product>`. Move UI components into a shared package only when repeated real product use proves the abstraction won't homogenize design.
-- Start offline-first with no remote account. Add SQLite, payment processing, notifications, synchronization or server components after specific user needs and privacy reviews.
-- Each app owns bundle IDs, legal brand identity, platform entitlements, accessibility tests and store assets. Don't reuse one app listing or republish indistinguishable shells.
-
-## Native edge
-
-Expo and React Native are sufficient for most trackers/calendars. Widgets, high-frequency background location, native iOS controls or Apple-specific effects may warrant app-local native modules or SwiftUI; do not reimplement native behavior in a fragile cross-platform imitation.
-
-## ADR
-
-See [docs/DECISIONS.md](docs/DECISIONS.md). Prioritize package alignment and a lockfile before production builds.
+See \`apps/shift-calendar/README.md\` and \`docs/design/apps/shift-calendar.md\`. Revisit architecture only after two independently successful apps show a repeated need.

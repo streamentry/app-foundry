@@ -14,21 +14,24 @@
     "start": "npm run start -w @foundry/starter",
     "ios": "npm run ios -w @foundry/starter",
     "android": "npm run android -w @foundry/starter",
+    "shift:start": "npm run start -w @foundry/shift-calendar",
+    "shift:ios": "npm run ios -w @foundry/shift-calendar",
+    "shift:android": "npm run android -w @foundry/shift-calendar",
     "check": "npm run typecheck && npm run test && npm run architecture:check",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "doctor": "npm exec --workspace=@foundry/starter -- expo install --check",
+    "doctor": "npm exec --workspace=@foundry/starter -- expo install --check && npm exec --workspace=@foundry/shift-calendar -- expo install --check",
     "architecture:check": "node scripts/check-architecture.mjs"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.14.0",
-    "typescript": "~7.0.2",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "~6.0.3",
     "typescript-eslint": "^8.0.0",
     "prettier": "^3.6.0",
-    "globals": "^17.14.0"
+    "globals": "^16.0.0"
   }
 }

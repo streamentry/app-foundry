@@ -1,14 +1,20 @@
-## Outcome / evidence
+## User outcome and independent evidence
 
-## Scope / non-goals
+## Scope / non-goals / privacy and App Store differentiation
 
-## Checks (observed, not assumed)
+## Automated checks (attach observed output)
 - [ ] npm run check
 - [ ] npm run lint
 - [ ] npm run doctor
-- [ ] npm run format:check (after scaffold formatting)
-- [ ] iOS/Android device QA and screenshots for UI changes
+- [ ] npm run format:check (after formatting baseline)
 
-## Security, privacy, accessibility, store review
+## Native QA (link evidence, do not assume CI covers it)
+- [ ] iOS simulator and real device
+- [ ] Android emulator or device
+- [ ] Screen reader, large type, dark mode, reduced motion and offline
+- [ ] On-device SQLite persistence, notifications and CSV export
 
-## Risks, rollback, unknowns
+## Risks / rollback / untested paths
+
+## Release approval
+- [ ] Explicit human approval for signing, tracking, paid services and store publication

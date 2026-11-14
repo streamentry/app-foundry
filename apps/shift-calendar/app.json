@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Shift Calendar Preview",
+    "slug": "foundry-shift-calendar",
+    "scheme": "foundry-shift-calendar",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamentry.foundry.shiftcalendar.dev"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.streamentry.foundry.shiftcalendar.dev"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
