@@ -2,39 +2,52 @@
 
 A lean, experiment-led Expo / React Native monorepo for independently differentiated mobile utilities.
 
-## Quick start
+## Start the interactive design lab
 
-Requires Node >=22.13, npm >=10, and device tooling for iOS/Android.
+Node >=22.13 and npm >=10 required. Xcode / Android Studio are needed for local device builds.
 
 ```sh
 npm install
 npm run doctor
 npm run check
 npm run start
+# npm run ios    (iOS Simulator)
+# npm run android (Android Emulator)
 ```
 
-For iOS Simulator use `npm run ios`; for Android Emulator `npm run android`. The demo screen is in `apps/starter/app/index.tsx`.
+The starter app is a **design gallery**: select any of ten app concepts to see its own light/dark palette, typography, shape, information hierarchy and functioning preview interaction. It intentionally contains no production user data or telemetry.
 
-**Bootstrap note:** Installation and native verification could not be executed in the authoring environment because npm registry access was unavailable. CI starts with `npm install --package-lock=false`. Generate and commit `package-lock.json` locally and switch CI to `npm ci` before calling the foundation production-ready.
+## Folder map
+
+```text
+apps/starter/              Design gallery (Expo Router)
+packages/core/             Shared pure product-independent logic
+packages/design-system/    Ten authored app themes + foundation tokens + contrast tests
+docs/design/               Product-specific design briefs and platform guidance
+docs/templates/            Experiment + app design brief templates
+.github/workflows/         CI checks
+```
+
+The app identities are internal *design directions*, not released product names. **Do not ship the starter** or merely re-skin it for separate listings. Each production app needs its own distinct workflow, copy, icon, bundle ID and store position.
 
 ## Commands
 
 | Command | Purpose |
 | --- | --- |
-| `npm run start` | Start Expo |
-| `npm run ios` / `npm run android` | Simulator or emulator |
-| `npm run check` | Types, tests and architecture contract |
+| `npm run start` | Start Expo design gallery |
+| `npm run ios` / `npm run android` | Run device simulator |
+| `npm run check` | Types, unit/contrast tests, architecture |
 | `npm run lint` | ESLint |
-| `npm run format:check` | Prettier (run after formatting scaffold) |
-| `npm run doctor` | Expo dependency compatibility check |
+| `npm run doctor` | Expo dependency compatibility |
+| `npm run format` / `npm run format:check` | Prettier |
 
-## Operating model
+## Product process
 
-1. Write an experiment using `docs/templates/EXPERIMENT.md` before building.
-2. Find a differentiated user job with a realistic organic distribution hypothesis.
-3. Ship the smallest offline-first experience, measure real behavior and preserve user privacy.
-4. Continue, improve or retire based on declared evidence thresholds.
+1. Write [an experiment brief](docs/templates/EXPERIMENT.md) and make the cheapest demand test.
+2. Draft [an app-specific design brief](docs/templates/APP-DESIGN-BRIEF.md).
+3. Ship the smallest distinct offline-first experience; use the shared design contract, not a shared visual template.
+4. Measure acquisition, activation, retention, accessibility and net revenue. Improve or archive without sunk-cost thinking.
 
-See [AGENTS.md](AGENTS.md), [DESIGN.md](DESIGN.md), [VISION.md](VISION.md), [ARCHITECTURE.md](ARCHITECTURE.md), [docs/SDLC.md](docs/SDLC.md), [docs/SECURITY.md](docs/SECURITY.md), and [docs/RELEASE.md](docs/RELEASE.md).
+Engineering and quality: [AGENTS.md](AGENTS.md) · [ARCHITECTURE.md](ARCHITECTURE.md) · [DESIGN.md](DESIGN.md) · [Vision](VISION.md) · [Agentic SDLC](docs/SDLC.md) · [Security](docs/SECURITY.md) · [Release](docs/RELEASE.md).
 
-Do not release the generic starter as a consumer app. Each production app needs its own bundle ID, UX, identity, data policy, store listing, signing and device QA.
+**Bootstrap debt:** No reproducible lockfile yet (CI temporarily installs without one). No native build, screenshots or app-signing verification has been completed. Generate and commit `package-lock.json`, switch CI to `npm ci`, and perform device QA before production release.
