@@ -79,3 +79,18 @@ The client ledger is **not a timer, invoice, contract approval, legal evidence o
 ## Operational pilot artifact for Hours Left #097
 
 The [five-person usability and demand test](../research/retainer-hours/README.md) specifies real-user consent, counterbalanced tasks, signed-device access limitations, and observed truth-based results. The separate npm run retainer:pilot:test checks the **decision evaluator code**, not human adoption. A score of NOT_EVALUABLE is the expected state until the actual test has been run.
+
+## Folio / Invoice Number Ledger #011 — manual release gates
+
+- [ ] On physical iOS/Android, create two prefixes, reserve multiple numbers, issue and void correctly, and test after app force-close.
+- [ ] Verify numbers marked issued/void can NEVER be reused via the UI, including when archiving and reopening a series.
+- [ ] Verify manual import rejects below-start numbers, duplicates, unsupported input, missing source notes and malformed dates.
+- [ ] Confirm gap range arithmetic with numbers 215 issued, 216 void, 220 imported: 217–219 unaccounted, next 221.
+- [ ] Confirm the UI does not equate a locally unaccounted number with a void/illegal invoice.
+- [ ] Force low-storage failures; app must not falsely announce an unsaved new reference as committed.
+- [ ] Export CSV, open in spreadsheet, verify malicious values don't execute; back up JSON, restore, reject orphan and duplicate events.
+- [ ] Test manual restoration after reinstall; explain data loss and local-only limitations.
+- [ ] VoiceOver/TalkBack, dark and light, 200% dynamic type, 320pt phone, tablet, RTL and long series/client names.
+- [ ] Check jurisdiction requirements for official invoice numbering, electronic invoices, cancellations and credit notes. This app is not an issuer.
+- [ ] Five observed manual issuers and two concrete switching/payment commitments, plus dated ASO evidence.
+- [ ] Clear brand/legal copy, privacy/support URLs, store assets and signed native builds before public submission.

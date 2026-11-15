@@ -52,7 +52,12 @@
     "retainer:test": "npm run test -w @foundry/idea-freelance-retainer-hours",
     "retainer:bundle": "npm run bundle -w @foundry/idea-freelance-retainer-hours",
     "retainer:pilot": "node scripts/evaluate-retainer-pilot.mjs",
-    "retainer:pilot:test": "node --test scripts/tests/evaluate-retainer-pilot.test.mjs"
+    "retainer:pilot:test": "node --test scripts/tests/evaluate-retainer-pilot.test.mjs",
+    "invoice:start": "npm run start -w @foundry/idea-invoice-number-ledger",
+    "invoice:ios": "npm run ios -w @foundry/idea-invoice-number-ledger",
+    "invoice:android": "npm run android -w @foundry/idea-invoice-number-ledger",
+    "invoice:test": "npm run test -w @foundry/idea-invoice-number-ledger",
+    "invoice:bundle": "npm run bundle -w @foundry/idea-invoice-number-ledger"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

@@ -1,3 +1,3 @@
-import { IdeaApp } from '@foundry/idea-engine';
-/** Independent on-device app for idea 011; no shared user data with other apps. */
-export default function App(){return <IdeaApp slug="invoice-number-ledger"/>;}
+import InvoiceNumberApp from '../src/InvoiceNumberApp';
+/** Promoted idea #011: standalone sequence reconciliation rather than generic renderer. */
+export default function App(){return <InvoiceNumberApp/>;}

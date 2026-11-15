@@ -94,3 +94,13 @@ The [five-person Hours Left study kit](docs/research/retainer-hours/README.md) i
 
     npm run retainer:pilot
     npm run retainer:pilot:test
+
+## Third independent research app: Folio invoice references
+
+[Invoice Number Ledger #011](apps/ideas/invoice-number-ledger/README.md) is a standalone offline reference lifecycle experience, not a generic Idea Lab app or an invoice creator. It tracks reserved / issued / void status, explicit external backfill and locally unaccounted ranges, with a user-initiated CSV/JSON export.
+
+    npm run invoice:start
+    npm run invoice:test
+    npm run invoice:bundle
+
+[Design](docs/design/apps/invoice-number-ledger.md) · [Decision](docs/ideas/DECISIONS/2026-11-15-invoice-number.md) · [Pilot](docs/research/INVOICE_NUMBER_PILOT.md). This remains an **unvalidated** opportunity, not permission to release or charge users.

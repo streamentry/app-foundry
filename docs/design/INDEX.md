@@ -39,3 +39,7 @@ Open the starter gallery, choose a product, toggle day/night. This gallery is a 
 ## New independent design direction
 
 [Hours Left / Retainer Hours Ledger](apps/freelance-retainer-hours.md) — indigo editorial ledger with a time-consumption strip and exact remaining hours. **One client, one period, one explainable balance.** The standalone UI is separate from the shared Idea Lab prototype. Research status only.
+
+## Further independently designed app
+
+[**Folio / Invoice Number Ledger (#011)**](apps/invoice-number-ledger.md) — letterpress ledger, sienna paper-stamped reference numbers, manual lifecycle (reserved / issued / void) and true local gap ranges. Bespoke interface; no legal/commercial validation or signed mobile release yet.
