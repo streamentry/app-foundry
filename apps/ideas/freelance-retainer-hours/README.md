@@ -44,3 +44,8 @@ The original backlog assigned this idea **80/100**, below several 87/100 entries
 See [Decision](../../../docs/ideas/DECISIONS/2026-11-15-retainer-hours.md), [Design](../../../docs/design/apps/freelance-retainer-hours.md) and [Pilot](../../../docs/research/RETAINER_HOURS_PILOT.md).
 
 No App Store submission until CI passes, native device QA is completed, export/restore is tested and at least five real retainer users have performed an observed task.
+
+
+## Ready-to-run five-person field test (still not run)
+
+[Runbook](../../../docs/research/retainer-hours/README.md) · [Device installation](../../../docs/research/retainer-hours/INSTALL.md) · [Anonymous results](../../../docs/research/retainer-hours/results.json). The signed pilot-build configuration is in eas.json, but no distribution binary or eligible test-user contacts are available yet. Never treat green JS CI as tested real-device distribution.

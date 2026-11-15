@@ -18,7 +18,7 @@
     "shift:start": "npm run start -w @foundry/shift-calendar",
     "shift:ios": "npm run ios -w @foundry/shift-calendar",
     "shift:android": "npm run android -w @foundry/shift-calendar",
-    "check": "npm run typecheck && npm run test && npm run architecture:check && npm run idea:verify",
+    "check": "npm run typecheck && npm run test && npm run architecture:check && npm run idea:verify && npm run retainer:pilot:test",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "lint": "eslint .",
@@ -50,7 +50,9 @@
     "retainer:ios": "npm run ios -w @foundry/idea-freelance-retainer-hours",
     "retainer:android": "npm run android -w @foundry/idea-freelance-retainer-hours",
     "retainer:test": "npm run test -w @foundry/idea-freelance-retainer-hours",
-    "retainer:bundle": "npm run bundle -w @foundry/idea-freelance-retainer-hours"
+    "retainer:bundle": "npm run bundle -w @foundry/idea-freelance-retainer-hours",
+    "retainer:pilot": "node scripts/evaluate-retainer-pilot.mjs",
+    "retainer:pilot:test": "node --test scripts/tests/evaluate-retainer-pilot.test.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

@@ -1,5 +1,7 @@
 # Hours Left — 7-day user falsification pilot
 
+**Operational kit:** [Five-person study runbook](retainer-hours/README.md) with consent, task cards, actual observer instructions, install caveats and an evidence evaluator. No human interviews have yet happened.
+
 **As of 2026-11-15: plan only. No interviews, tests, search-volume results, conversion or payment evidence.**
 
 ## Competitive baseline from vendor/App Store claims
