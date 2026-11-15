@@ -52,3 +52,7 @@ A palette swap or changing the app name is never an acceptable differentiation s
 ## Second independent product — Hours Left
 
 [Hours Left design](docs/design/apps/freelance-retainer-hours.md) is a dedicated prepaid-hour reconciliation experience. It uses warm-ivory/indigo editorial typography, an exact time-consumption strip and dated debit/credit ledger. This is deliberately distinct from Counter Close's receipt-first physical cash counting. A color swap alone would not be distinct.
+
+## Third independent visual mechanism — Folio
+
+[Invoice Reference Ledger design](docs/design/apps/invoice-number-ledger.md): typography-first number register in warm paper and sienna, with a press-stamped next reference, status-filtered entries and transparent missing-range reconciliation. It is deliberately distinct from Counter Close's green receipt and Hours Left's indigo hours bar. Do not make it an invoice-generator clone or falsely suggest a cryptographic audit trail.

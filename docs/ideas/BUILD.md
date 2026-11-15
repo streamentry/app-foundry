@@ -71,3 +71,9 @@ See [the product README](../../apps/ideas/cash-float-count/README.md) and [desig
 ## Second promoted research app: Hours Left (#097)
 
 The standalone [Retainer Hours Ledger](../../apps/ideas/freelance-retainer-hours/README.md) has its own typed UI, client periods, integer-minute work debits and allowance credits, historical statements, confirmation-gated local JSON backup/restore, CSV export and deliberate archived import from the old calculator. It is independent of the shared idea renderer. TypeScript, domain tests, Android/iOS JS bundles and contrast checks run via CI. **Merchant validation, signed native builds, real-device testing and store assets remain undone.** See [research decision](DECISIONS/2026-11-15-retainer-hours.md).
+
+## Third promoted research app: Folio Invoice Number Ledger (#011)
+
+The standalone [Invoice Number Ledger](../../apps/ideas/invoice-number-ledger/README.md) now replaces the shared research renderer for independent device runs. This distinct product has separated series, atomic next-number reservation, reserved→issued/void transitions, external record import with a mandatory source note, gap-range calculations, immutable-looking local event history and validated user-directed exports. No backend or automatic e-invoice features are introduced.
+
+**Not proven:** commercial demand, jurisdiction-specific invoice numbering compliance, signed native builds, real device/accessibility behavior, correct cross-device allocation (NOT supported), store assets or organic search opportunity. See [the decision](DECISIONS/2026-11-15-invoice-number.md) and [the five-user falsification protocol](../research/INVOICE_NUMBER_PILOT.md).
