@@ -103,7 +103,7 @@ test('no mutation can remove past issued/void events silently from a valid resto
   assert.throws(()=>validateLedger([rows[0],rows[2]]),/Only reserved/);
   assert.throws(()=>validateLedger([...rows,rows[2]]),/Duplicate record ID/);
   assert.throws(()=>validateLedger([rows[0],rows[1],{
-    ...rows[2],id:'e3',action:'void',
+    ...rows[2],id:'e3',action:'void',note:'Voided as a duplicate attempt',
   }]),/Only reserved/);
 });
 test('unrelated invoice series never share counters, even with different padding',()=>{
