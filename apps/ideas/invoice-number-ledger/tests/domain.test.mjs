@@ -96,13 +96,13 @@ test('archiving preserves history but disables new numbers and transitions',()=>
   rows=archiveSeries(rows,'series_1',false);
   assert.equal(next(rows,'e2').ordinal,2);
 });
-test('no mutation can remove past issued/void events silently from a valid restored ledger',()=>{
+test('invalid post-issue transitions and orphan events are rejected in a restored ledger',()=>{
   let rows=next([mk()],'e1').rows;
   rows=resolveReserved(rows,'series_1',1,'issue','','','e2',day,fixedAt);
   assert.throws(()=>validateLedger(rows.filter(r=>r.kind!=='series')),/no series/);
   assert.throws(()=>validateLedger([rows[0],rows[2]]),/Only reserved/);
   assert.throws(()=>validateLedger([...rows,rows[2]]),/Duplicate record ID/);
-  assert.throws(()=>validateLedger([rows[0],rows[1],{
+  assert.throws(()=>validateLedger([rows[0],rows[1],rows[2],{
     ...rows[2],id:'e3',action:'void',note:'Voided as a duplicate attempt',
   }]),/Only reserved/);
 });
