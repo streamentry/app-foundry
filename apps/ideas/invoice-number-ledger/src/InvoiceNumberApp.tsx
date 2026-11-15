@@ -45,7 +45,7 @@ function Chip({p,label,active,onPress}:{p:Palette;label:string;active:boolean;on
     style={({pressed})=>({
       minHeight:46,borderRadius:9,borderWidth:1,borderColor:active?p.accent:p.rule,
       paddingHorizontal:14,justifyContent:'center',alignItems:'center',
-      backgroundColor:active?p.soft:p.card,opacity:pressed?.78:1,
+      backgroundColor:active?p.soft:p.card,opacity:pressed?0.78:1,
     })}>
     <Text style={{fontSize:13,fontWeight:'800',color:active?p.onSoft:p.ink}}>{label}</Text>
   </Pressable>;
@@ -86,7 +86,7 @@ function ReferenceStamp({p,series,number,subtitle}:{
 }
 function EventTimeline({p,selected}:{p:Palette;selected:Reference}){
   return <Panel p={p} receipt>
-    <Eyebrow p={p}>Local event history · {selected.events.length} action(s)</Eyebrow>
+    <Eyebrow p={p}>{'Local event history · '+selected.events.length+' action(s)'}</Eyebrow>
     {selected.events.map((event,index)=><View key={event.id} style={{gap:7,paddingVertical:6}}>
       <View style={{flexDirection:'row',justifyContent:'space-between',gap:8}}>
         <Text style={{color:p.ink,fontSize:15,fontWeight:'900'}}>
@@ -133,7 +133,9 @@ export default function InvoiceNumberApp(){
     try{return validateLedger(store.records);}
     catch{return null;}
   },[store.records]);
-  const valid=clean!==null&&!store.loading&&!store.error;
+  // Store writes may fail transiently; allow retry after correcting an input. The hook
+  // still rejects writes when initial storage never opened successfully.
+  const valid=clean!==null&&!store.loading;
   const series=seriesOf(clean??[]);
   const chosen=series.find(s=>s.id===seriesId)??null;
   const refs=chosen?referencesOf(clean??[],chosen):[];
@@ -286,7 +288,7 @@ export default function InvoiceNumberApp(){
 
       {page==='home'?<>
         <Heading p={p} eyebrow="One reference · one recorded decision"
-          title="No missing numbers."
+          title="Know each number."
           body="Know which invoice references were reserved, issued or voided. Each numbering series stays separate and offline."/>
         <View style={{backgroundColor:p.soft,padding:18,borderRadius:14,gap:8}}>
           <Eyebrow p={p}>Important boundary</Eyebrow>
@@ -308,7 +310,7 @@ export default function InvoiceNumberApp(){
           const summary=summaryOf(s,referencesOf(clean??[],s));
           return <Pressable key={s.id} accessibilityRole="button"
             accessibilityLabel={'Open '+s.label+' series '+s.code}
-            onPress={()=>viewSeries(s)} style={({pressed})=>({opacity:pressed?.72:1})}>
+            onPress={()=>viewSeries(s)} style={({pressed})=>({opacity:pressed?0.72:1})}>
             <Panel p={p}>
               <View style={{flexDirection:'row',justifyContent:'space-between',gap:12}}>
                 <View style={{flex:1,gap:5}}>

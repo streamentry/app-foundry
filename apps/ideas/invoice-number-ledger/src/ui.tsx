@@ -41,7 +41,7 @@ export function Button({p,label,onPress,kind='primary',disabled=false}:{
       backgroundColor:main?p.accent:p.card,borderColor:main?p.accent:p.rule,
       borderWidth:1,borderRadius:11,minHeight:53,paddingHorizontal:15,
       paddingVertical:13,justifyContent:'center',alignItems:'center',
-      opacity:disabled?.4:pressed?.76:1,
+      opacity:disabled?0.4:pressed?0.76:1,
     })}>
     <Text style={{color:fg,fontWeight:'900',fontSize:15,textAlign:'center'}}>{label}</Text>
   </Pressable>;
@@ -92,7 +92,7 @@ export function ReferenceRow({p,ref,onPress}:{
 }){
   return <Pressable accessibilityRole="button"
     accessibilityLabel={'Open invoice reference '+ref.formatted+' '+ref.status}
-    onPress={onPress} style={({pressed})=>({opacity:pressed?.7:1})}>
+    onPress={onPress} style={({pressed})=>({opacity:pressed?0.7:1})}>
     <Panel p={p}>
       <View style={{...row,justifyContent:'space-between',gap:9}}>
         <Text style={{color:p.ink,fontSize:22,fontWeight:'900',

@@ -32,6 +32,12 @@ for (const idea of data.ideas) {
     assert.ok(existsSync(join(dir, 'src', 'domain.ts')));
     assert.ok(existsSync(join(dir, 'src', 'RetainerHoursApp.tsx')));
     assert.ok(existsSync(join(dir, 'tests', 'domain.test.mjs')));
+  } else if (idea.slug === 'invoice-number-ledger') {
+    // Standalone reference sequence ledger (not the shared Idea Lab renderer).
+    assert.ok(screen.includes('<InvoiceNumberApp'), 'Invoice ledger entrypoint missing');
+    assert.ok(existsSync(join(dir, 'src', 'domain.ts')));
+    assert.ok(existsSync(join(dir, 'src', 'InvoiceNumberApp.tsx')));
+    assert.ok(existsSync(join(dir, 'tests', 'domain.test.mjs')));
   } else {
     assert.ok(screen.includes('<IdeaApp slug="' + idea.slug + '"'));
   }

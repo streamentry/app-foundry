@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Invoice Number Ledger Test",
+    "name": "Folio Invoice Ledger Preview",
     "slug": "foundry-idea-011",
     "scheme": "foundry-idea-011",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "platforms": [

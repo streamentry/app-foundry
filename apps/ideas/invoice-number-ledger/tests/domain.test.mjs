@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import {
   MAX_ORDINAL,emptySeries,createSeries,createEvent,formatReference,validateLedger,
@@ -159,4 +160,27 @@ test('initial start from existing books does not fabricate earlier invoice histo
   assert.equal(result.ordinal,215);
   assert.equal(summaryOf(a,referencesOf(result.rows,a)).unaccounted,0);
   assert.equal(formatReference(a,215),'CN-2026-00215');
+});
+
+test('Folio design maintains at least WCAG AA 4.5:1 text contrast in both modes',()=>{
+  const source=readFileSync(new URL('../src/ui.tsx',import.meta.url),'utf8');
+  const luminance=hex=>{
+    const c=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255)
+      .map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);
+    return c[0]*.2126+c[1]*.7152+c[2]*.0722;
+  };
+  const ratio=(a,b)=>{
+    const x=luminance(a),y=luminance(b);
+    return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);
+  };
+  for(const mode of ['LIGHT','DARK']){
+    const found=source.match(new RegExp('export const '+mode+':Palette=\\{([\\s\\S]*?)\\};'));
+    assert.ok(found,mode+' palette missing');
+    const colors=Object.fromEntries([...found[1].matchAll(/([a-zA-Z]+):'(#[0-9a-fA-F]{6})'/g)]
+      .map(x=>[x[1],x[2]]));
+    for(const [a,b] of [['ink','bg'],['ink','card'],['ink','sheet'],['sub','bg'],
+      ['sub','card'],['onAccent','accent'],['onSoft','soft'],['danger','card']]){
+      assert.ok(ratio(colors[a],colors[b])>=4.5,mode+' '+a+'/'+b+' is below contrast threshold');
+    }
+  }
 });
