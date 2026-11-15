@@ -74,3 +74,8 @@ No store submission until one app demonstrates a differentiated, complete task t
 - [ ] Verify name/trademark, privacy policy, support route, screenshots, store category and signed native builds.
 
 The client ledger is **not a timer, invoice, contract approval, legal evidence or sync service**.
+
+
+## Operational pilot artifact for Hours Left #097
+
+The [five-person usability and demand test](../research/retainer-hours/README.md) specifies real-user consent, counterbalanced tasks, signed-device access limitations, and observed truth-based results. The separate npm run retainer:pilot:test checks the **decision evaluator code**, not human adoption. A score of NOT_EVALUABLE is the expected state until the actual test has been run.

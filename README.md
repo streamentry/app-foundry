@@ -86,3 +86,11 @@ Read the [product README](apps/ideas/cash-float-count/README.md), [receipt-led d
     npm run retainer:bundle
 
 [Design](docs/design/apps/freelance-retainer-hours.md) · [Decision](docs/ideas/DECISIONS/2026-11-15-retainer-hours.md) · [Pilot](docs/research/RETAINER_HOURS_PILOT.md).
+
+
+## Real-user retainer pilot (no participants observed yet)
+
+The [five-person Hours Left study kit](docs/research/retainer-hours/README.md) includes consent-first recruitment scripts, a task-card pair, a moderator answer key, counterbalanced assignment and a result evaluator that cannot claim success with missing data. The default result is NOT_EVALUABLE. Physical iPhone testing with SDK 58 needs a signed build, not public iPhone Expo Go.
+
+    npm run retainer:pilot
+    npm run retainer:pilot:test
