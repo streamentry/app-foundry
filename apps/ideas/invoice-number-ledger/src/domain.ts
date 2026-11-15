@@ -1,7 +1,8 @@
 /** Invoice reference sequence ledger. This does NOT issue legal invoices, taxes, or signed audit trails.
  * Records are locally append-only events. No invoice number can be silently recycled.
  */
-export const STORE_KEY='invoice-reference-ledger.v1';
+// useLocalRecords appends its own .v1 suffix to this namespace.
+export const STORE_KEY='invoice-reference-ledger';
 export const MAX_ORDINAL=9_999_999;
 export const MAX_RECORDS=10_000;
 export const BACKUP_ID='invoice-number-ledger';
