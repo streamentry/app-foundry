@@ -1,0 +1,92 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { supportEmail } from '../data/site';
+
+export const prerender = true;
+const updatedAt = new Intl.DateTimeFormat('en', {
+  dateStyle: 'long',
+  timeZone: 'UTC',
+}).format(new Date());
+---
+
+<SiteLayout
+  title="Privacy and data"
+  description="How Shift Calendar stores shift schedules and how the Tini Apps website is delivered."
+  path="/privacy/"
+>
+  <article class="page-width document-page">
+    <p class="eyebrow">Privacy</p>
+    <h1>Simple by design. Local by default.</h1>
+    <p class="page-intro">
+      This page describes how the current Shift Calendar app and this website
+      handle data.
+    </p>
+    <p class="updated-line">Updated {updatedAt}</p>
+
+    {!supportEmail && (
+      <aside class="draft-notice" aria-label="Publication status">
+        <strong>Pre-release notice</strong>
+        <p>
+          The privacy contact is not set yet. This page is not ready to serve as
+          the app store privacy policy.
+        </p>
+      </aside>
+    )}
+
+    <div class="prose-block">
+      <h2>Shift Calendar data</h2>
+      <p>
+        The app stores shift dates, shift types, optional work hours, optional
+        notes, and your reminder preference in a local SQLite database on your
+        device. The current app has no account, cloud sync, advertising, or
+        analytics service. Tini Apps does not receive your roster from the app.
+      </p>
+      <p>
+        The app uses roster information to show your calendar, upcoming shifts,
+        monthly totals, and optional local reminders. Notes are not included in
+        reminders and are not sent to Tini Apps.
+      </p>
+      <p>
+        The app does not add separate field-level encryption. Keep sensitive
+        information out of shift notes and use your device's security settings.
+      </p>
+
+      <h2>Reminders</h2>
+      <p>
+        If you enable reminders, the app schedules local notifications on your
+        device. They contain the shift type, date, and start time, not your notes.
+        Delivery is best effort and depends on device settings and operating-system behavior.
+      </p>
+
+      <h2>Exports and deletion</h2>
+      <p>
+        CSV export is started by you and passed to the operating-system share
+        sheet. The destination you select may make its own copy. Delete All
+        Shifts removes roster records from the app; it cannot remove copies you
+        have exported. Device backups are controlled by your operating system.
+      </p>
+
+      <h2>Your choices and requests</h2>
+      <p>
+        You can view and edit your shifts in the app and delete the saved roster
+        in Settings. Tini Apps cannot retrieve or erase roster data stored only
+        on your device. For questions about this website or privacy practices,
+        contact us using the address below.
+      </p>
+
+      <h2>This website</h2>
+      <p>
+        This site has no account, form, advertising, or analytics code. It is
+        delivered through Cloudflare, which may process technical request data
+        to operate and protect the service. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.
+      </p>
+
+      <h2>Contact</h2>
+      {supportEmail ? (
+        <p>For privacy questions, contact <a href={`mailto:${supportEmail}`}>{supportEmail}</a>.</p>
+      ) : (
+        <p>The public privacy and support contact is being confirmed.</p>
+      )}
+    </div>
+  </article>
+</SiteLayout>

@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { router, useFocusEffect } from 'expo-router';
-import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
+import { Alert, Linking, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { clearAllShifts, listShifts, remindersEnabled } from '../src/data/repository';
 import { disableReminders, enableReminders, syncReminders } from '../src/services/reminders';
@@ -16,6 +16,14 @@ export default function SettingsScreen() {
   const [ready, setReady] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  async function openPrivacyPolicy(): Promise<void> {
+    try {
+      await Linking.openURL('https://tiniapps.runlumi.app/privacy/');
+    } catch {
+      Alert.alert('Unable to open privacy page', 'Try again later or visit https://tiniapps.runlumi.app/privacy/.');
+    }
+  }
 
   useFocusEffect(useCallback(() => {
     let active = true;
@@ -109,7 +117,7 @@ export default function SettingsScreen() {
             <Text style={{ color: p.ink, fontSize: 17, fontWeight: '700' }}>{total} saved entries</Text>
             <Text style={{ color: p.muted, lineHeight: 22, fontSize: 15 }}>
               Export a spreadsheet-compatible CSV. The share sheet lets you choose where the file goes.
-              No automatic cloud backup or import is provided in this preview.
+              No automatic cloud backup or import is provided.
             </Text>
             <Action label="Export my roster (.csv)" p={p} secondary disabled={!ready || busy} onPress={() => { void exportCSV(); }} />
           </View>
@@ -122,6 +130,16 @@ export default function SettingsScreen() {
             advertising SDK or remote server is used. Uninstalling may remove local data. Export a CSV first if you need a portable copy.
             CSV files you share are managed by the destination you choose.
           </Text>
+          <Pressable
+            accessibilityRole="link"
+            accessibilityHint="Opens the Tini Apps privacy page in your browser."
+            onPress={() => { void openPrivacyPolicy(); }}
+            style={{ minHeight: 48, justifyContent: 'center' }}
+          >
+            <Text style={{ color: p.accent, fontSize: 15, fontWeight: '700', textDecorationLine: 'underline' }}>
+              Read the full privacy policy
+            </Text>
+          </Pressable>
           <Text style={{ color: p.muted, fontSize: 14, lineHeight: 22 }}>
             Scheduled hours are estimates, not payroll, tax, overtime or legal advice. Overnight shifts are assigned to their start date.
           </Text>
@@ -137,7 +155,7 @@ export default function SettingsScreen() {
           <Text style={{ textAlign: 'center', fontSize: 15, fontWeight: '700', color: p.accent }}>‹ Back to roster</Text>
         </Pressable>
         <Text style={{ fontSize: 12, lineHeight: 19, color: p.muted, textAlign: 'center' }}>
-          App Foundry preview · Not yet a production App Store release
+          Tini Apps · Personal shift calendar
         </Text>
       </ScrollView>
     </SafeAreaView>

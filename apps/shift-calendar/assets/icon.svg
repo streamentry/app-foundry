@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Shift Calendar icon proposal</title>
+  <rect width="1024" height="1024" fill="#2349A6" />
+  <rect x="150" y="150" width="724" height="724" rx="128" fill="#F2F5FB" />
+  <rect x="252" y="260" width="48" height="504" rx="24" fill="#2349A6" />
+  <rect x="366" y="260" width="394" height="132" rx="48" fill="#E3EBFF" />
+  <rect x="366" y="448" width="304" height="132" rx="48" fill="#2349A6" />
+  <rect x="366" y="636" width="214" height="128" rx="48" fill="#C6D2E3" />
+</svg>

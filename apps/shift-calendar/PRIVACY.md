@@ -1,6 +1,8 @@
 # Shift Calendar · Privacy and data behavior (pre-release)
 
-**Status:** Internal MVP policy draft, not reviewed legal copy. Do not publish without confirming actual production SDKs, store disclosures, regional requirements, and legal contact information.
+**Status:** Internal data-behavior reference. A factual public notice is live at <https://tiniapps.runlumi.app/privacy/>. It is not legal clearance for every target market or a completed store submission review.
+
+Before using it as final store policy, confirm the production SDK inventory, store disclosures, intended markets, and applicable privacy obligations with the responsible legal/business owner. Public privacy and support contact: `app@cjs.vn`.
 
 ## Data stored
 

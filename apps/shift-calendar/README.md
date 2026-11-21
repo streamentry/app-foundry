@@ -34,8 +34,9 @@ Or run from \`apps/shift-calendar\` with \`npm run start\`. Local iOS requires X
 - Reminders are best effort; only next 30 days (max 32 pending) are scheduled when the app opens or data changes. Power-saving, permissions and timezone changes may affect delivery.
 - Dates are local calendar days. Nominal hours don't subtract breaks or correctly represent payroll time through DST changes.
 - Language: English-first. Internationalization and week-start customization are future work.
-- No final app icon, store screenshots, privacy URL, legal clearance, IAP listing or production signing yet.
-- No complete native device QA has been performed via the GitHub connector alone.
+- Public privacy and support pages: <https://tiniapps.runlumi.app/>. The privacy page is a factual data notice, not legal clearance for every target market.
+- The owner-approved store name and icon are configured. Bundle/package ID availability, production screenshots, store account metadata, and signing remain unverified.
+- An iOS 26.5 simulator Release build was smoke-checked; the full iOS and Android device QA checklist remains incomplete.
 
 ## Acceptance tests
 

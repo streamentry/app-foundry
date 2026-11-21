@@ -1,9 +1,10 @@
 {
   "expo": {
-    "name": "Shift Calendar Preview",
-    "slug": "foundry-shift-calendar",
-    "scheme": "foundry-shift-calendar",
+    "name": "Tini Shift Calendar",
+    "slug": "tini-shift-calendar",
+    "scheme": "tini-shift-calendar",
     "version": "0.1.0",
+    "icon": "./assets/icon.png",
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "experiments": {
@@ -11,18 +12,18 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.streamentry.foundry.shiftcalendar.dev"
+      "bundleIdentifier": "app.runlumi.tiniapps.shiftcalendar",
+      "buildNumber": "1"
     },
     "android": {
-      "edgeToEdgeEnabled": true,
-      "package": "com.streamentry.foundry.shiftcalendar.dev"
+      "package": "app.runlumi.tiniapps.shiftcalendar",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon-adaptive-foreground.png",
+        "backgroundColor": "#2349A6"
+      }
     },
-    "plugins": [
-      "expo-router"
-    ],
-    "platforms": [
-      "ios",
-      "android"
-    ]
+    "plugins": ["expo-router"],
+    "platforms": ["ios", "android"]
   }
 }

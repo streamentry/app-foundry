@@ -17,22 +17,29 @@
     "shift:start": "npm run start -w @foundry/shift-calendar",
     "shift:ios": "npm run ios -w @foundry/shift-calendar",
     "shift:android": "npm run android -w @foundry/shift-calendar",
+    "site:dev": "astro dev --root site",
+    "site:build": "astro build --root site",
+    "site:preview": "npm run site:build && wrangler dev --config site/dist/server/wrangler.json",
+    "site:deploy": "node site/scripts/check-deploy.mjs && npm run site:build && wrangler deploy --config site/dist/server/wrangler.json",
     "check": "npm run typecheck && npm run test && npm run architecture:check",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "doctor": "npm exec --workspace=@foundry/starter -- expo install --check && npm exec --workspace=@foundry/shift-calendar -- expo install --check",
+    "doctor": "npm exec --no-install --workspace=@foundry/starter -- expo install --check && npm exec --no-install --workspace=@foundry/shift-calendar -- expo install --check",
     "architecture:check": "node scripts/check-architecture.mjs",
     "bundle:shift": "npm run bundle -w @foundry/shift-calendar"
   },
   "devDependencies": {
+    "@astrojs/cloudflare": "13.7.0",
     "@eslint/js": "^9.0.0",
+    "astro": "6.4.8",
     "eslint": "^9.0.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.6.0",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.0.0",
-    "prettier": "^3.6.0",
-    "globals": "^16.0.0"
+    "wrangler": "4.158.0"
   }
 }

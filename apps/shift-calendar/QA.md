@@ -6,6 +6,15 @@
 - Domain tests: leap years, Monday-first month grid, overnight time, active next shift, non-destructive rotation, invalid clock inputs, CSV formula injection
 - ESLint and Expo SDK dependency compatibility
 
+## Local simulator and emulator smoke evidence (2026-11-16, 2026-11-18)
+
+- Xcode 27.2 built the Release configuration for an iOS 26.5 iPhone 17 Pro simulator with bundle ID `app.runlumi.tiniapps.shiftcalendar`.
+- The embedded-bundle app launched on a fresh simulator install and showed the empty-roster screen. Screenshot: [iOS 26.5 clean install](qa/ios26.5-clean-install.png).
+- Android 16 (API 36) Pixel 7 emulator smoke (2026-11-18): `expo run:android` built and installed the debug app. The clean roster opened, the shift editor opened, a Day shift saved, and the saved shift remained after force-stop and relaunch. Screenshots: [clean roster](qa/android-api36-debug-install.png), [shift editor](qa/android-api36-add-shift-screen.png), and [saved shift after relaunch](qa/android-api36-day-shift-relaunch.png). This is limited emulator evidence, not a store-signed build or physical-device acceptance.
+- Android `bundleRelease` completed and produced an AAB targeting API 36, but the generated bundle uses the debug signing configuration. It is **not uploadable to Google Play**.
+- This smoke check did not cover schedule edits, rotations, notifications, CSV sharing, deletion, accessibility settings, RTL, offline behavior, or timezone changes.
+- No physical Android device is attached. These simulator/build checks are not owner signoff or store readiness.
+
 ## iOS/Android device QA required before publishing
 
 1. On a clean install, home is empty and readable, with no sample shifts silently inserted.
@@ -21,6 +30,5 @@
 
 ## Explicit unfinished work
 
-- Production bundle IDs, unique app icon and localized screenshots, legal/privacy review, App Store Connect metadata and genuine customer demand evidence
-- Signed builds on device, automated E2E tests, accessibility and localization fixes discovered by field testing
-- Committed npm lockfile and strict \`npm ci\` CI
+- Store account sign-in, app record creation, bundle/package identifier availability, production signing, screenshots, and final store metadata
+- Manual iOS and Android functional/accessibility QA, user feedback, and legal review for intended markets

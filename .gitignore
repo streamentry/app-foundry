@@ -1,6 +1,9 @@
 node_modules/
 .expo/
 .expo-shared/
+.astro/
+.playwright-cli/
+**/.wrangler/
 dist/
 web-build/
 coverage/
@@ -16,4 +19,6 @@ coverage/
 *.jks
 ios/
 android/
+apps/shift-calendar/dist-ios/
+apps/shift-calendar/dist-android/
 *.tsbuildinfo

@@ -1,0 +1,50 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+
+export const prerender = true;
+---
+
+<SiteLayout
+  title="Shift Calendar"
+  description="An offline-first shift calendar for people with rotating hours."
+  path="/apps/shift-calendar/"
+>
+  <article class="page-width document-page product-page">
+    <p class="eyebrow">Tini Apps product</p>
+    <h1>Shift Calendar</h1>
+    <p class="page-intro">
+      A personal schedule for people whose working hours change from day to day.
+      See the next shift, plan a rotation, and keep manual changes intact.
+    </p>
+
+    <div class="product-facts">
+      <section>
+        <h2>Plan by shift</h2>
+        <p>Record day, evening, night, or day off. Overnight work belongs to the date it starts.</p>
+      </section>
+      <section>
+        <h2>Repeat with care</h2>
+        <p>Use a rotation pattern to fill blank dates. Existing shifts and days off stay in place.</p>
+      </section>
+      <section>
+        <h2>Keep control</h2>
+        <p>Reminders are optional. CSV export and deletion are started by you.</p>
+      </section>
+    </div>
+
+    <section class="prose-block">
+      <h2>What it does not do</h2>
+      <p>
+        It is not a time clock, payroll calculator, employer roster, or shared
+        calendar. It does not back up or sync your schedule between devices.
+        Monthly hour totals are nominal and do not account for breaks or daylight
+        saving changes.
+      </p>
+    </section>
+
+    <div class="page-links">
+      <a class="button button-primary" href="/privacy/">Privacy and data</a>
+      <a class="text-link" href="/support/">Get help</a>
+    </div>
+  </article>
+</SiteLayout>

@@ -1,5 +1,8 @@
 node_modules
 .expo
+.astro
+.playwright-cli
+**/.wrangler
 coverage
 dist
 package-lock.json

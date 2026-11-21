@@ -1,0 +1,72 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+export const prerender = true;
+---
+
+<SiteLayout
+  title="Simple tools for working life"
+  description="Tini Apps makes small, focused tools. Learn about Shift Calendar, an offline-first schedule for rotating workers."
+>
+  <section class="home-hero page-width">
+    <div class="hero-copy">
+      <p class="eyebrow">A small tool for a changing week</p>
+      <h1>See your next shift.</h1>
+      <p class="hero-lede">
+        Shift Calendar keeps rotating hours, days off, and optional reminders
+        clear on your own device.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/apps/shift-calendar/">Explore Shift Calendar</a>
+        <a class="text-link" href="/privacy/">Read how data is handled</a>
+      </div>
+    </div>
+    <figure class="schedule-figure" aria-labelledby="schedule-title">
+      <figcaption id="schedule-title">
+        <span class="figure-label">Illustrative rotation</span>
+        <span class="figure-heading">A week at a glance</span>
+      </figcaption>
+      <ol class="sample-week">
+        <li><span class="day-name">Mon</span><span class="shift-mark shift-day"></span><span class="shift-name">Day</span><span class="shift-time">07:00 to 15:00</span></li>
+        <li><span class="day-name">Tue</span><span class="shift-mark shift-day"></span><span class="shift-name">Day</span><span class="shift-time">07:00 to 15:00</span></li>
+        <li><span class="day-name">Wed</span><span class="shift-mark shift-night"></span><span class="shift-name">Night</span><span class="shift-time">23:00 to 07:00</span></li>
+        <li><span class="day-name">Thu</span><span class="shift-mark shift-off"></span><span class="shift-name">Day off</span><span class="shift-time">No shift</span></li>
+      </ol>
+      <p class="figure-note">Example only. The app starts with an empty schedule.</p>
+    </figure>
+  </section>
+
+  <section class="value-section page-width" aria-labelledby="value-title">
+    <div class="section-heading">
+      <p class="eyebrow">Made for real rotations</p>
+      <h2 id="value-title">The details matter when hours move.</h2>
+    </div>
+    <dl class="value-list">
+      <div>
+        <dt>See the next shift</dt>
+        <dd>Check today, the coming week, and the month without digging through a general calendar.</dd>
+      </div>
+      <div>
+        <dt>Keep your edits</dt>
+        <dd>Fill a repeating pattern without replacing shifts or days off you already entered.</dd>
+      </div>
+      <div>
+        <dt>Keep the schedule local</dt>
+        <dd>No account or cloud sync. Your roster stays in the app on your device.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="limits-section">
+    <div class="page-width limits-inner">
+      <p class="eyebrow">Clear limits</p>
+      <h2>A personal calendar, not an employer system.</h2>
+      <p>
+        Shift Calendar does not track attendance, calculate pay, or sync with an
+        employer roster. Reminders are optional and best effort. Exports go only
+        where you choose to share them.
+      </p>
+      <a class="text-link" href="/support/">Read common questions</a>
+    </div>
+  </section>
+</SiteLayout>

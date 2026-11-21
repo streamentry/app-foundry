@@ -1,0 +1,46 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { supportEmail } from '../data/site';
+
+export const prerender = true;
+---
+
+<SiteLayout
+  title="Support"
+  description="Answers about shift rotations, reminders, export, and deleting data in Shift Calendar."
+  path="/support/"
+>
+  <article class="page-width document-page">
+    <p class="eyebrow">Support</p>
+    <h1>Help with Shift Calendar</h1>
+    <p class="page-intro">A few quick answers about the way the app works.</p>
+
+    <div class="faq-list">
+      <section>
+        <h2>Will a rotation replace shifts I entered?</h2>
+        <p>No. Rotation fill skips dates that already have an entry, including a day off.</p>
+      </section>
+      <section>
+        <h2>Why did a reminder not arrive?</h2>
+        <p>Reminders are local and best effort. Check the app's reminder setting and your device's notification permissions.</p>
+      </section>
+      <section>
+        <h2>Can I use the same schedule on another device?</h2>
+        <p>Not currently. Shift Calendar has no cloud sync, account, or built-in backup and restore.</p>
+      </section>
+      <section>
+        <h2>How do I export or delete my schedule?</h2>
+        <p>Use Settings to export a CSV or delete all shifts. Deletion asks for confirmation. Copies already shared elsewhere are not removed.</p>
+      </section>
+    </div>
+
+    <section class="contact-block">
+      <h2>Need something else?</h2>
+      {supportEmail ? (
+        <p>Email <a href={`mailto:${supportEmail}`}>{supportEmail}</a>.</p>
+      ) : (
+        <p>The public support address is being confirmed and will be added before store submission.</p>
+      )}
+    </section>
+  </article>
+</SiteLayout>
